@@ -277,7 +277,6 @@ app.post('/sendUserMail', async (req, res) => {
   }
 });
 
-
 app.post('/contactNormal', async (req, res) => {
   let { name, mail, message } = req.body;
 
@@ -408,7 +407,6 @@ app.post('/contactForm', async (req, res) => {
   }
 });
 
-
 app.post('/contactNormal', async (req, res) => {
   let { name, mail, message } = req.body;
 
@@ -515,7 +513,7 @@ app.post('/newsletter', async (req, res) => {
   const msg = {
     to: ['rspmanas1@gmail.com'],
     from: { name: 'Manas Gupta', email: 'rkinfotechasr@gmail.com' },
-    subject: `New Enquiry: ${req.body.name}`,
+    subject: `New member for Newsletter`,
     html: `${tableStyles}${tableData}`
   };
 
