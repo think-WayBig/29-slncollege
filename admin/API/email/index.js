@@ -524,3 +524,62 @@ app.post('/newsletter', async (req, res) => {
     res.json({ message: "Error", error: error });
   }
 });
+
+app.post('/courseInterest', async (req, res) => {
+  let { mail, course } = req.body;
+
+  const tableStyles = `
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        font-family: Arial, sans-serif;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+      }
+      th, td {
+        padding: 15px;
+        text-align: left;
+        border: 1px solid #ddd;
+        font-size: 15px;
+      }
+      th {
+        background-color: #1a5276;
+        color: #fff;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      tr:hover {
+        background-color: #e9e9e9;
+      }
+    </style>
+  `;
+
+  const tableData = `
+    <table>
+      <tr>
+        <th style="background-color: #1a5276; color: #fff; padding: 15px; font-size: 15px;">Contact</th>
+        <td style="padding: 15px; border: 1px solid #ddd; font-size: 15px;">${mail}</td>
+      </tr>
+      <tr>
+        <th style="background-color: #1a5276; color: #fff; padding: 15px; font-size: 15px;">Course</th>
+        <td style="padding: 15px; border: 1px solid #ddd; font-size: 15px;">${course}</td>
+      </tr>
+    </table>
+  `;
+
+  const msg = {
+    to: ['rspmanas1@gmail.com'],
+    from: { name: 'Manas Gupta', email: 'rkinfotechasr@gmail.com' },
+    subject: `New member for Course`,
+    html: `${tableStyles}${tableData}`
+  };
+
+  try {
+    await sendGridMail.send(msg);
+    res.json({ message: "Email sent Successfully!!" });
+  } catch (error) {
+    res.json({ message: "Error", error: error });
+  }
+});

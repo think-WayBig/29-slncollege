@@ -266,14 +266,14 @@
           <div class="col-md-4 mb-4 mb-md-0">
             <div class="form-group mb-0">
               <label>Full Contact Number</label>
-              <input class="form-control" type="text" id="name" placeholder="Your Contact Number">
+              <input class="form-control" type="text" id="contactNumber" placeholder="Your Contact Number">
               <i class="far fa-user"></i>
             </div>
           </div>
           <div class="col-md-4 mb-4 mb-md-0">
             <div class="form-group select-border mb-0">
               <label>Your Courses</label>
-              <select class="form-control basic-select">
+              <select class="form-control basic-select" id="courseSelect">
                 <option value="" selected="selected">Please Choose</option>
                 <option value="bams">Bachelor of Ayurvedic Medicine and Surgery (B.A.M.S)</option>
                 <option value="dpharmacy">Diploma in Pharmacy (Ayurveda)</option>
@@ -282,7 +282,7 @@
           </div>
           <div class="col-md-4 align-self-center">
             <div class="course-serach">
-              <a class="btn btn-dark btn-block mt-md-4" href="">Search Course</a>
+              <button class="btn btn-dark btn-block mt-md-4" id="searchButton">Search Course</button>
             </div>
           </div>
         </div>
@@ -299,26 +299,31 @@
       <div class="row align-items-center">
         <div class="col-lg-6 mb-4 mb-lg-0 pr-xl-6">
           <div class="section-title mb-4">
-            <h2 class="title">Personal Education, Extraordinary Success</h2>
-            <p class="lead mb-0">Commitment is something that comes from understanding that everything has its price and
-              then having the willingness to pay that price.</p>
+            <h2 class="title">Nurturing Knowledge, Shaping Futures</h2>
+            <p class="lead mb-0">At Shree Lakshmi Narayan Ayurvedic College & Hospital, we believe in fostering a
+              commitment to excellence through personal education and extraordinary success.</p>
           </div>
-          <p class="mb-4 mb-lg-5">The other virtues practice in succession by Franklin were silence, order, resolution,
-            frugality, industry, sincerity, Justice, moderation, cleanliness, tranquility, chastity and humility. For
-            the summary order he followed a little scheme of employing his time each day.</p>
+          <p class="mb-4 mb-lg-5">Established by the revered Late Shri
+            Pujya Pt. Mayadhari Ji Shastri and managed by Shree Durgiana Education Foundation since 1972, our
+            institution has been a beacon of Ayurvedic learning and healthcare in Amritsar, and neighboring
+            regions of Punjab. We are dedicated to cultivating an environment where commitment and excellence are not
+            just values but a way of life.</p>
           <a href="#" class="btn btn-primary btn-round">Read More</a>
         </div>
         <div class="col-lg-6 pr-lg-5">
           <div class="row">
             <div class="col-sm-7">
-              <img class="img-fluid w-100 border-radius" src="images/about/01.jpg" alt="">
+              <img class="img-fluid w-100 border-radius"
+                src="images/about/College-Building-Shree-Lashmi-Narayan-Ayurveda-Armitsar.png" alt="">
             </div>
             <div class="col-sm-5 mt-sm-5 mt-4">
-              <img class="img-fluid mb-sm-2 w-100 border-radius" src="images/about/02.jpg" alt="">
+              <img class="img-fluid mb-sm-2 w-100 border-radius"
+                src="images/about/Student-Activities-Shree-Lashmi-Narayan-Ayurveda-Armitsar.png" alt="">
               <div class="position-relative bg-overlay-black-50 border-radius overflow-hidden mt-4">
-                <img class="img-fluid border-radius" src="images/about/03.jpg" alt="image">
+                <img class="img-fluid border-radius"
+                  src="images/about/Ayurveda-Students-Pledge-Shree-Lashmi-Narayan-Ayurveda-Armitsar.png" alt="image">
                 <a class="btn-animation position-center popup-youtube"
-                  href="https://www.youtube.com/watch?v=LgvseYYhqU0">
+                  href="https://www.youtube.com/embed/3MULo_IblRM?si=Jr9D5h7UTZZZDgPi">
                   <i class="fas fa-play"></i>
                 </a>
               </div>
@@ -1277,7 +1282,7 @@
 
 
   <style>
-    /* -----------Snackbar----------------------- */
+    /* Snackbar */
     #snackbar {
       visibility: hidden;
       min-width: 250px;
@@ -1286,20 +1291,42 @@
       backdrop-filter: blur(2px);
       color: #fff;
       text-align: center;
-      border-radius: 2px;
+      border-radius: 3px;
       padding: 16px;
       position: fixed;
       z-index: 1000;
       left: 50%;
       bottom: 30px;
       font-size: 17px;
-      border-radius: 3px;
     }
 
     #snackbar.show {
       visibility: visible;
-      -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
       animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+
+    @keyframes fadein {
+      from {
+        bottom: 0;
+        opacity: 0;
+      }
+
+      to {
+        bottom: 30px;
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeout {
+      from {
+        bottom: 30px;
+        opacity: 1;
+      }
+
+      to {
+        bottom: 0;
+        opacity: 0;
+      }
     }
   </style>
 
@@ -1362,8 +1389,59 @@
         return;
       }
     };
-  </script>
 
+    document.getElementById('searchButton').addEventListener('click', async function (e) {
+      e.preventDefault();
+      const contactNumber = document.getElementById('contactNumber').value;
+      const course = document.getElementById('courseSelect').value;
+      const searchButton = document.getElementById('searchButton');
+
+      if (!contactNumber) {
+        toast('Please enter your contact number.');
+        return;
+      }
+
+      if (!course) {
+        toast('Please select a course.');
+        return;
+      }
+
+      // Disable the button to prevent multiple submissions
+      searchButton.disabled = true;
+      searchButton.textContent = 'Processing...';
+
+      try {
+        const response = await fetch('http://localhost:5000/courseInterest', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ mail: contactNumber, course: course })
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+          toast(result.message);
+          // Redirect to the selected course page
+          if (course === 'bams') {
+            window.location.href = '/bams';
+          } else if (course === 'dpharmacy') {
+            window.location.href = '/dpharmacy';
+          }
+        } else {
+          toast('Error: ' + result.message);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        toast('An error occurred. Please try again.');
+      } finally {
+        // Re-enable the button
+        searchButton.disabled = false;
+        searchButton.textContent = 'Search Course';
+      }
+    });
+  </script>
   <!--=================================
     Javascript -->
 
