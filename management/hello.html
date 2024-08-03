@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Section</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .card-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .card {
+            flex: 0 0 33%;
+            max-width: 33%;
+            min-width: 33%;
+            scroll-snap-align: center;
+            margin: 0 10px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin: 0;
+            font-size: 20px;
+            color: #002855;
+            /* Dark Blue */
+        }
+
+        .card p {
+            margin: 10px 0 0;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .card.active {
+            transform: scale(1.1);
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card-section">
+        <div class="card">
+            <img src="path/to/your/president-image.jpg" alt="President">
+            <h3>Sh. Ramesh Chander Sharma</h3>
+            <p>President</p>
+        </div>
+        <div class="card">
+            <img src="path/to/your/vp-image.jpg" alt="Vice President">
+            <h3>Sh. ChanderShekhar Sharma</h3>
+            <p>Vice President</p>
+        </div>
+        <div class="card">
+            <img src="path/to/your/gen-sec-image.jpg" alt="Gen. Secty">
+            <h3>Sh. D.P. Gupta</h3>
+            <p>Gen. Secty</p>
+        </div>
+    </div>
+
+    <script>
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach((card, index) => {
+            card.addEventListener('mouseover', () => {
+                cards.forEach(c => c.classList.remove('active'));
+                card.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

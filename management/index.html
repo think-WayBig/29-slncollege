@@ -219,12 +219,12 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-md-12">
                     <div class="text-center">
-                        <h1 class="text-white">Management</h1>
+                        <h1 class="text-white">Our Management Team</h1>
                     </div>
                     <div class="d-flex justify-content-center ">
                         <ol class="breadcrumb mb-0 p-0">
                             <li class="breadcrumb-item"><a href="../">Home</a></li>
-                            <li class="breadcrumb-item active"><span>Management</span></li>
+                            <li class="breadcrumb-item active"><span>Our Management Team</span></li>
                         </ol>
                     </div>
                 </div>
@@ -235,118 +235,297 @@
     inner-header -->
 
     <!--=================================
-    Gallery -->
-    <section class="space-ptb">
+    Management -->
+
+    <style>
+        .background-container {
+            position: relative;
+            width: 100%;
+            padding: 10px 30px;
+            padding-top: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('../images/bg/SLNAY-Ayurveda-College-Amritsar-Management-Committee.png') no-repeat center center/cover;
+        }
+
+        .message-container {
+            width: 80%;
+            padding: 20px 40px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 2px solid #002855;
+            /* Dark Blue */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .message-container h2 {
+            color: #002855;
+            /* Dark Blue */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .message-container p {
+            font-size: 20px;
+            line-height: 1.8;
+            color: #333;
+            text-align: justify;
+            position: relative;
+        }
+
+        @media (max-width: 500px) {
+            .background-container {
+                position: relative;
+                width: 100%;
+                padding: 50px 10px;
+                padding-top: 300px;
+            }
+
+            .message-container {
+                width: 95%;
+            }
+
+            .message-container p {
+                font-size: 14px;
+            }
+        }
+
+        .message-container p:before,
+        .message-container p:after {
+            content: '“';
+            font-size: 80px;
+            color: #002855;
+            /* Dark Blue */
+            position: absolute;
+        }
+
+        .message-container p:before {
+            top: -20px;
+            left: -30px;
+        }
+
+        .message-container p:after {
+            content: '”';
+            bottom: -20px;
+            right: -30px;
+        }
+    </style>
+
+    <style>
+        .management-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+
+        .management-table thead {
+            background-color: #a61d37;
+            color: white;
+        }
+
+        .management-table th,
+        .management-table td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+        }
+
+        @media (max-width: 500px) {
+
+            .management-table th,
+            .management-table td {
+                padding: 8px 10px;
+                font-size: 14px;
+            }
+
+            .container-custom {
+                padding: 0;
+            }
+        }
+
+        .management-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        .management-table tbody tr:nth-of-type(odd) {
+            background-color: #ffffff;
+        }
+
+        .management-table tbody tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+
+    <section class="space-ptb bg-light">
         <div class="container">
-            <!-- <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10 text-center">
-                    <div class="section-title">
-                        <h2>Our Gallery</h2>
+            <div style="justify-content: center;" class="row">
+                <div class="col-lg-4 col-md-4 p-1 col-sm-6 mb-4 mb-md-0">
+                    <div class="team">
+                        <div class="team-img">
+                            <img class="img-fluid"
+                                src="../images/team/Shree-Lakshmi-Narayan-College-and-Hospital-Board-Member-President-Ramesh-Chander-Sharma.png"
+                                alt="">
+                        </div>
+                        <div style="padding: 30px 10px;" class="team-info">
+                            <a href="teachers-single.html" class="team-name">Sh. Ramesh Chander Sharma</a>
+                            <p style="margin: 0;" class="team-leader">President</p>
+                            <!-- <ul class="list-unstyled">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              </ul> -->
+                        </div>
                     </div>
                 </div>
-            </div> -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="filters-group mb-lg-4 text-center">
-                        <button class="btn-filter  active" data-group="all">All</button>
-                        <button class="btn-filter" data-group="awards">Awards</button>
-                        <button class="btn-filter" data-group="infrastructure">Infrastructure</button>
-                        <button class="btn-filter" data-group="campus">Campus Life</button>
-                        <button class="btn-filter" data-group="festivals">Festivals</button>
-                        <button class="btn-filter" data-group="clinical">Clinical Training</button>
-                        <button class="btn-filter" data-group="seminars">Seminars</button>
+                <div class="col-lg-4 col-md-4 p-1 col-sm-6 mb-4 mb-md-0">
+                    <div class="team">
+                        <img class="img-fluid"
+                            src="../images/team/Shree-Lakshmi-Narayan-College-and-Hospital-Board-Member-Vice-President-Chandershekhar-Sharma.png"
+                            alt="">
+                        <div style="padding: 30px 10px;" class="team-info">
+                            <a href="teachers-single.html" class="team-name">Sh. Chanderchekhar Sharma</a>
+                            <p style="margin: 0;" class="team-leader">Vice President</p>
+                            <!-- <ul class="list-unstyled">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              </ul> -->
+                        </div>
                     </div>
-                    <div class="my-shuffle-container columns-3 popup-gallery full-screen">
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["branding"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/02.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/02.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+                </div>
+                <div class="col-lg-4 col-md-4 p-1 col-sm-6">
+                    <div class="team">
+                        <div class="team-img">
+                            <img class="img-fluid"
+                                src="../images/team/Shree-Lakshmi-Narayan-College-and-Hospital-Board-Member-General-Secretary-D-P-Gupta.png"
+                                alt="">
                         </div>
-                        <!-- item End -->
-
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["web", "photography", "branding"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/03.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/03.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+                        <div style="padding: 30px 10px;" class="team-info">
+                            <a href="teachers-single.html" class="team-name">Sh. D.P. Gupta</a>
+                            <p style="margin: 0;" class="team-leader">General Secretary</p>
+                            <!-- <ul class="list-unstyled">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              </ul> -->
                         </div>
-                        <!-- item End -->
-
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["photography"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/04.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/04.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
-
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["advertising"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/05.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/05.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
-
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["design", "advertising"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/06.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/06.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
-
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["branding", "web"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/01.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/01.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section>
+        <div class="background-container">
+            <div class="message-container">
+                <h2>President’s Message</h2>
+                <p>Our team includes persons of high esteem who help me and move with me throughout to uplift the
+                    institute. Our all decisions are unanimous. Our institute tries to inculcate and explore the
+                    best capabilities of each and every student and the staff member, not only in education but also
+                    in co-curricular activities. We all want the institute to be the state of art in North India.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="space-ptb">
+        <div class="container-custom container">
+            <h2 class="text-center">Members of the Managing Committee</h2>
+            <table class="management-table">
+                <thead>
+                    <tr>
+                        <th>Sr.No.</th>
+                        <th>Name of Member</th>
+                        <th>Designation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Sh. Santosh Gupta</td>
+                        <td>Patron</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Sh. Ramesh Chander Sharma</td>
+                        <td>President</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Sh. ChanderShekhar Sharma</td>
+                        <td>Vice President</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Sh. D.P. Gupta</td>
+                        <td>Gen. Secty</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Sh. Sudhir Shridhar</td>
+                        <td>Fin. Secty</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Sh. Suman Mehra</td>
+                        <td>Joint. Secty</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Sh. Krishan Arora</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Sh. Arun Khanna</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Sh. Sham Lal Mahajan</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Dr. Ravi Biala</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Dr. Yogesh Arora</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Dr. Sandeep Shridhar</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Sh. Ashok Arora</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Sh. Gopal Arora</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Sh. Rakesh Sharma</td>
+                        <td>Special Invitee</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
     <!--=================================
-    Gallery -->
+    Management -->
 
     <!--=================================
     Call to action -->

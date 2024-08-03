@@ -219,12 +219,12 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-md-12">
                     <div class="text-center">
-                        <h1 class="text-white">Students List</h1>
+                        <h1 class="text-white">Our Students List</h1>
                     </div>
                     <div class="d-flex justify-content-center ">
                         <ol class="breadcrumb mb-0 p-0">
                             <li class="breadcrumb-item"><a href="../">Home</a></li>
-                            <li class="breadcrumb-item active"><span>Students List</span></li>
+                            <li class="breadcrumb-item active"><span>Our Students List</span></li>
                         </ol>
                     </div>
                 </div>
@@ -238,111 +238,702 @@
     Gallery -->
     <section class="space-ptb">
         <div class="container">
-            <!-- <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10 text-center">
-                    <div class="section-title">
-                        <h2>Our Gallery</h2>
-                    </div>
-                </div>
-            </div> -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="filters-group mb-lg-4 text-center">
-                        <button class="btn-filter  active" data-group="all">All</button>
-                        <button class="btn-filter" data-group="awards">Awards</button>
-                        <button class="btn-filter" data-group="infrastructure">Infrastructure</button>
-                        <button class="btn-filter" data-group="campus">Campus Life</button>
-                        <button class="btn-filter" data-group="festivals">Festivals</button>
-                        <button class="btn-filter" data-group="clinical">Clinical Training</button>
-                        <button class="btn-filter" data-group="seminars">Seminars</button>
-                    </div>
-                    <div class="my-shuffle-container columns-3 popup-gallery full-screen">
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["branding"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/02.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/02.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
 
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["web", "photography", "branding"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/03.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/03.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
+            <style>
+                /* Container to allow horizontal scrolling on small screens */
+                .table-wrapper {
+                    overflow-x: auto;
+                    -webkit-overflow-scrolling: touch;
+                }
 
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["photography"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/04.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/04.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
+                /* Styling for the table itself */
+                .batch-table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin: 20px 0;
+                    text-align: left;
+                }
 
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["advertising"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/05.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/05.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
+                .batch-table thead {
+                    background-color: #a61d37;
+                    color: white;
+                }
 
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["design", "advertising"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/06.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/06.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
+                .batch-table th,
+                .batch-table td {
+                    border: 1px solid #ddd;
+                    padding: 12px 15px;
+                }
 
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["branding", "web"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/01.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/01.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
-                    </div>
-                </div>
-            </div>
+                .batch-table tbody tr:nth-of-type(even) {
+                    background-color: #f3f3f3;
+                }
+
+                .batch-table tbody tr:nth-of-type(odd) {
+                    background-color: #ffffff;
+                }
+
+                .batch-table tbody tr:hover {
+                    background-color: #ddd;
+                }
+
+                /* Responsive adjustments */
+                @media (max-width: 700px) {
+                    .batch-table thead {
+                        display: none;
+                    }
+
+                    .batch-table tbody tr {
+                        display: block;
+                        margin-bottom: 10px;
+                        border: 1px solid #ddd;
+                        position: relative;
+                    }
+
+                    .batch-table tbody td {
+                        display: block;
+                        width: 100%;
+                        box-sizing: border-box;
+                        position: relative;
+                        padding-left: 50%;
+                        text-align: right;
+                    }
+
+                    .batch-table tbody td::before {
+                        content: attr(data-label);
+                        position: absolute;
+                        left: 0;
+                        width: 50%;
+                        padding-left: 10px;
+                        font-weight: bold;
+                        white-space: nowrap;
+                    }
+
+                    .batch-table tbody td:first-child {
+                        padding-left: 10px;
+                    }
+                }
+            </style>
+
+            <h2 class="text-center">BAMS Batch 2023-24</h2>
+            <table class="batch-table">
+                <thead>
+                    <tr>
+                        <th>Sr.No.</th>
+                        <th>Name of Student</th>
+                        <th>Father’s Name</th>
+                        <th>Mother’s Name</th>
+                        <th>Sex</th>
+                        <th>Mobile</th>
+                        <th>PAET Marks</th>
+                        <th>Category</th>
+                        <th>I.D</th>
+                        <th>Quota</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>BHAGYAM ARORA</td>
+                        <td>SANJEEV KUMAR</td>
+                        <td>SANGITA ARORA</td>
+                        <td>Male</td>
+                        <td>8847071556</td>
+                        <td>140</td>
+                        <td>GEN</td>
+                        <td>2467</td>
+                        <td>MANAGEMENT</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>AYUSHI SHARMA</td>
+                        <td>RAKESH MOHAN SHARMA</td>
+                        <td>ANJANA SHARMA</td>
+                        <td>Female</td>
+                        <td>7018758391</td>
+                        <td>189</td>
+                        <td>ALL INDIA QUOTA</td>
+                        <td>2448</td>
+                        <td>MANAGEMENT</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>AVKIRAT KAUR</td>
+                        <td>HARVINDER SINGH</td>
+                        <td>PARMINDER KAUR</td>
+                        <td>Female</td>
+                        <td>9501920600</td>
+                        <td>280</td>
+                        <td>GEN</td>
+                        <td>2419</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>ARSHIYA</td>
+                        <td>SANJEEV KUMAR</td>
+                        <td>RIYA</td>
+                        <td>Female</td>
+                        <td>7018758391</td>
+                        <td>185</td>
+                        <td>GEN</td>
+                        <td>2461</td>
+                        <td>MANAGEMENT</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>AMRITPAL SINGH</td>
+                        <td>AVTAR SINGH</td>
+                        <td>SINDERPAL KAUR</td>
+                        <td>Male</td>
+                        <td>7424812863</td>
+                        <td>172</td>
+                        <td>GEN</td>
+                        <td>2457</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>AMANDEEP</td>
+                        <td>TILAK RAJ</td>
+                        <td>KIRAN BALA</td>
+                        <td>Male</td>
+                        <td>9041425278</td>
+                        <td>302</td>
+                        <td>BC</td>
+                        <td>2420</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>AKSHIT BHATIA</td>
+                        <td>SHAMSUNDAR BHATIA</td>
+                        <td>RADHIKA</td>
+                        <td>Male</td>
+                        <td>6239766435</td>
+                        <td>301</td>
+                        <td>GEN</td>
+                        <td>2469</td>
+                        <td>MANAGEMENT</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>ADITI THAKUR</td>
+                        <td>SANJEEV THAKUR</td>
+                        <td>KANCHAN THAKUR</td>
+                        <td>Female</td>
+                        <td>7876579974</td>
+                        <td>259</td>
+                        <td>ALL INDIA QUOTA</td>
+                        <td>2463</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>ABHISHEK</td>
+                        <td>ROOP RAM</td>
+                        <td>SHEELA RANI</td>
+                        <td>Male</td>
+                        <td>8837663886</td>
+                        <td>159</td>
+                        <td>SC</td>
+                        <td>2414</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>AASTHA BHATIA</td>
+                        <td>VISHAL BHATIA</td>
+                        <td>DIPTI BHATIA</td>
+                        <td>Female</td>
+                        <td>8968828030</td>
+                        <td>189</td>
+                        <td>GEN</td>
+                        <td>2412</td>
+                        <td>MANAGEMENT</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>BIKRAMMEET SINGH</td>
+                        <td>SUKHMEET SINGH</td>
+                        <td>JASBIR KAUR</td>
+                        <td>Female</td>
+                        <td>9914486370</td>
+                        <td>301</td>
+                        <td>GEN</td>
+                        <td>2415</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>CHAHAT</td>
+                        <td>ONKAR NATH</td>
+                        <td>KIRAN BALA</td>
+                        <td>Female</td>
+                        <td>7710333019</td>
+                        <td>190</td>
+                        <td>GEN</td>
+                        <td>2453</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>CHAMAN LAL</td>
+                        <td>YASH PAL</td>
+                        <td>DEVO RANI</td>
+                        <td>Male</td>
+                        <td>6239281958</td>
+                        <td>166</td>
+                        <td>SC</td>
+                        <td>2455</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>CHANDNI</td>
+                        <td>ASHOK KUMAR</td>
+                        <td>BALWINDER KAUR</td>
+                        <td>Female</td>
+                        <td>8146073007</td>
+                        <td>152</td>
+                        <td>SC</td>
+                        <td>2421</td>
+                        <td>MANAGEMENT</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>DIKSHA SHARMA</td>
+                        <td>RIPUDAMAN</td>
+                        <td>MONIKA SHARMA</td>
+                        <td>Female</td>
+                        <td>7973420975</td>
+                        <td>161</td>
+                        <td>GENERAL</td>
+                        <td>2447</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>DIYA GOGIA</td>
+                        <td>SANDEEP GOGIA</td>
+                        <td>RITIKA GOGIA</td>
+                        <td>Female</td>
+                        <td>9216862633</td>
+                        <td>264</td>
+                        <td>GENERAL</td>
+                        <td>2431</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>GURLEEN KAUR</td>
+                        <td>MANJIT SINGH</td>
+                        <td>KOMAL</td>
+                        <td>Female</td>
+                        <td>9041024719</td>
+                        <td>285</td>
+                        <td>BC</td>
+                        <td>2442</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>HARSHBIR KAUR</td>
+                        <td>BALWINDER SINGH</td>
+                        <td>KANWALJIT KAUR</td>
+                        <td>Female</td>
+                        <td>6283411186</td>
+                        <td>141</td>
+                        <td>GENERAL</td>
+                        <td>2460</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>HARSHITA</td>
+                        <td>HARMESH LAL</td>
+                        <td>BALWINDER</td>
+                        <td>Female</td>
+                        <td>8968611685</td>
+                        <td>325</td>
+                        <td>SC</td>
+                        <td>2418</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>HIMANI</td>
+                        <td>MANOJ SHARMA</td>
+                        <td>BABLI DEVI</td>
+                        <td>Female</td>
+                        <td>9728193337</td>
+                        <td>204</td>
+                        <td>ALL INDIA QUOTA</td>
+                        <td>2452</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>JASKIRAT SINGH</td>
+                        <td>JASWINDER SINGH</td>
+                        <td>JASPREET KAUR</td>
+                        <td>Male</td>
+                        <td>9872780386</td>
+                        <td>170</td>
+                        <td>BC</td>
+                        <td>2410</td>
+                        <td>MANAGEMENT</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>JASMEET KAUR</td>
+                        <td>SURJIT SINGH</td>
+                        <td>ARVINDER KAUR</td>
+                        <td>Female</td>
+                        <td>7973444878</td>
+                        <td>141</td>
+                        <td>GENERAL</td>
+                        <td>2458</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td>JASMINE KAUR</td>
+                        <td>RAJINDER PAL</td>
+                        <td>MANMOHAN KAUR</td>
+                        <td>Female</td>
+                        <td>8847031929</td>
+                        <td>181</td>
+                        <td>GEN</td>
+                        <td>2444</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td>JASPREET KAUR</td>
+                        <td>BINDERPAL SINGH</td>
+                        <td>SURINDER KAUR</td>
+                        <td>Female</td>
+                        <td>8283926943</td>
+                        <td>302</td>
+                        <td>GENERAL</td>
+                        <td>2454</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>KANIKA THAKUR</td>
+                        <td>HEMRAJ</td>
+                        <td>URMILA DEVI</td>
+                        <td>Male</td>
+                        <td>7876787835</td>
+                        <td>376</td>
+                        <td>ALL INDIA</td>
+                        <td>2426</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>Kanvi</td>
+                        <td>Vijay Kumar</td>
+                        <td>Sushma</td>
+                        <td>Female</td>
+                        <td>9877075385</td>
+                        <td>170</td>
+                        <td>BC</td>
+                        <td>0000</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td>KASHISH</td>
+                        <td>PARAMJIT SINGH</td>
+                        <td>RAMA DEVI</td>
+                        <td>Female</td>
+                        <td>9592802010</td>
+                        <td>383</td>
+                        <td>GEN</td>
+                        <td>2416</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>28</td>
+                        <td>KRITIKA SINGLA</td>
+                        <td>SANJAY KUMAR</td>
+                        <td>PRIYANKA SINGLA</td>
+                        <td>Female</td>
+                        <td>9814203125</td>
+                        <td>239</td>
+                        <td>GEN</td>
+                        <td>2437</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>29</td>
+                        <td>KULTAJ SINGH</td>
+                        <td>SHINGARA SINGH</td>
+                        <td>MANINDER KAUR</td>
+                        <td>Male</td>
+                        <td>7340757724</td>
+                        <td>299</td>
+                        <td>GEN</td>
+                        <td>2417</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>30</td>
+                        <td>MADHAV GULATI</td>
+                        <td>GAURAV GULATI</td>
+                        <td>KARUNA GULATI</td>
+                        <td>Male</td>
+                        <td>9115148267</td>
+                        <td>GEN</td>
+                        <td>2427</td>
+                        <td>MANAGEMENT</td>
+                    </tr>
+                    <tr>
+                        <td>31</td>
+                        <td>MANASVI</td>
+                        <td>BUNTY</td>
+                        <td>MANJU ROSE</td>
+                        <td>Female</td>
+                        <td>9877146404</td>
+                        <td>154</td>
+                        <td>SC</td>
+                        <td>2434</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>32</td>
+                        <td>MANIA SHARMA</td>
+                        <td>NARINDER KUMAR</td>
+                        <td>ANJANA RANI</td>
+                        <td>Female</td>
+                        <td>6006588118</td>
+                        <td>248</td>
+                        <td>ALL INDIA</td>
+                        <td>2464</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>33</td>
+                        <td>MANMEET DHUPPAR</td>
+                        <td>GURDIAL SINGH</td>
+                        <td>PREM LATA</td>
+                        <td>Female</td>
+                        <td>9465631016</td>
+                        <td>117</td>
+                        <td>SC</td>
+                        <td>2429</td>
+                        <td>MANAGEMENT</td>
+                    </tr>
+                    <tr>
+                        <td>34</td>
+                        <td>MANSI SHARMA</td>
+                        <td>VINOD KUMAR</td>
+                        <td>PAYAL SHARMA</td>
+                        <td>Female</td>
+                        <td>8082349925</td>
+                        <td>272</td>
+                        <td>ALL INDIA</td>
+                        <td>2438</td>
+                        <td>MANAGEMENT</td>
+                    </tr>
+                    <tr>
+                        <td>35</td>
+                        <td>MAPIA MAKHOTRA</td>
+                        <td>PRITPAL SINGH</td>
+                        <td>MANJU PATHANIA</td>
+                        <td>Female</td>
+                        <td>6239417499</td>
+                        <td>191</td>
+                        <td>GEN</td>
+                        <td>2423</td>
+                        <td>MANAGEMENT</td>
+                    </tr>
+                    <tr>
+                        <td>36</td>
+                        <td>MEGHNA VERMA</td>
+                        <td>GOPAL KRISHAN VERMA</td>
+                        <td>ANITA</td>
+                        <td>Female</td>
+                        <td>8437710530</td>
+                        <td>411</td>
+                        <td>GEN</td>
+                        <td>2432</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>37</td>
+                        <td>MEHAK</td>
+                        <td>SURAJ PARKASH</td>
+                        <td>ANITA</td>
+                        <td>Female</td>
+                        <td>9878493520</td>
+                        <td>179</td>
+                        <td>SC</< /code>
+                        </td>
+                        <td>2435</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>38</td>
+                        <td>MEHAKDEEP KAUR</td>
+                        <td>GURUPREET SINGH</td>
+                        <td>JATINDER KAUR</td>
+                        <td>Female</td>
+                        <td>7340921096</td>
+                        <td>180</td>
+                        <td>GEN</td>
+                        <td>2462</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>39</td>
+                        <td>MUSKANPREET KAUR</td>
+                        <td>GURMIT SINGH</td>
+                        <td>BALJEET KAUR</td>
+                        <td>Female</td>
+                        <td>6284841916</td>
+                        <td>399</td>
+                        <td>BC</td>
+                        <td>2468</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>40</td>
+                        <td>NANDINI</td>
+                        <td>RAMAN DOOMRA</td>
+                        <td>RITU RAGINI</td>
+                        <td>Female</td>
+                        <td>6280581900</td>
+                        <td>310</td>
+                        <td>GEN</td>
+                        <td>2440</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>41</td>
+                        <td>NAVNOOR KAUR</td>
+                        <td>BALJIT SINGH</td>
+                        <td>BABLESH</td>
+                        <td>Female</td>
+                        <td>9876852528</td>
+                        <td>212</td>
+                        <td>GEN</td>
+                        <td>2436</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>42</td>
+                        <td>NIHARIKA CHAURASIA</td>
+                        <td>SATISH KUMAR</td>
+                        <td>ANITA KUMARI</td>
+                        <td>Female</td>
+                        <td>9803321070</td>
+                        <td>186</td>
+                        <td>GEN</td>
+                        <td>2422</td>
+                        <td>MANAGEMENT</td>
+                    </tr>
+                    <tr>
+                        <td>43</td>
+                        <td>OJASWINI</td>
+                        <td>SANDEEP KUMAR</td>
+                        <td>RAJNI BALA</td>
+                        <td>Female</td>
+                        <td>8195944744</td>
+                        <td>123</td>
+                        <td>GEN</td>
+                        <td>2459</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>44</td>
+                        <td>PAHULPREET SINGH</td>
+                        <td>MANJINDER SINGH</td>
+                        <td>RAJWANT KAUR</td>
+                        <td>Male</td>
+                        <td>9501208056</td>
+                        <td>207</td>
+                        <td>GEN</td>
+                        <td>2443</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>45</td>
+                        <td>POOJA BHATIA</td>
+                        <td>RAVINDER KUMAR</td>
+                        <td>SHIKHA BHATIA</td>
+                        <td>Female</td>
+                        <td>8571072615</td>
+                        <td>319</td>
+                        <td>ALL INDIA</td>
+                        <td>2413</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>46</td>
+                        <td>PRABHJOT SINGH</td>
+                        <td>AMARJIT SINGH</td>
+                        <td>KAWALJIT KAUR</td>
+                        <td>Male</td>
+                        <td>8427870536</td>
+                        <td>147</td>
+                        <td>GEN</td>
+                        <td>2450</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>47</td>
+                        <td>PREETI PALAK</td>
+                        <td>NAVIN KUMAR JHA</td>
+                        <td>KIRAN JHA</td>
+                        <td>Female</td>
+                        <td>9725684522</td>
+                        <td>401</td>
+                        <td>ALL INDIA</td>
+                        <td>2433</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>48</td>
+                        <td>PUSHPANJAL WADHWA</td>
+                        <td>SONIA WADHWA</td>
+                        <td>SUNIL KUMAR</td>
+                        <td>Male</td>
+                        <td>7347330825</td>
+                        <td>161</td>
+                        <td>GEN</td>
+                        <td>2451</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                    <tr>
+                        <td>49</td>
+                        <td>RAJPAL SINGH</td>
+                        <td>GURDIAL SINGH</td>
+                        <td>RAJWINDER KAUR</td>
+                        <td>Male</td>
+                        <td>9501030454</td>
+                        <td>227</td>
+                        <td>BC</td>
+                        <td>2428</td>
+                        <td>MANAGEMENT</td>
+                    </tr>
+                    <tr>
+                        <td>50</td>
+                        <td>RITESH THAKUR</td>
+                        <td>TILAK RAJ</td>
+                        <td>SUSHMA DEVI</td>
+                        <td>Male</td>
+                        <td>9814188016</td>
+                        <td>132</td>
+                        <td>GEN</td>
+                        <td>2466</td>
+                        <td>GOVERNMENT</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
     <!--=================================
