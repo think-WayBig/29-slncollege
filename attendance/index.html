@@ -235,118 +235,476 @@
     inner-header -->
 
     <!--=================================
-    Gallery -->
+    Attendance -->
     <section class="space-ptb">
         <div class="container">
-            <!-- <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10 text-center">
-                    <div class="section-title">
-                        <h2>Our Gallery</h2>
-                    </div>
-                </div>
-            </div> -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="filters-group mb-lg-4 text-center">
-                        <button class="btn-filter  active" data-group="all">All</button>
-                        <button class="btn-filter" data-group="awards">Awards</button>
-                        <button class="btn-filter" data-group="infrastructure">Infrastructure</button>
-                        <button class="btn-filter" data-group="campus">Campus Life</button>
-                        <button class="btn-filter" data-group="festivals">Festivals</button>
-                        <button class="btn-filter" data-group="clinical">Clinical Training</button>
-                        <button class="btn-filter" data-group="seminars">Seminars</button>
-                    </div>
-                    <div class="my-shuffle-container columns-3 popup-gallery full-screen">
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["branding"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/02.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/02.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
+            <style>
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin-bottom: 20px;
+                }
 
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["web", "photography", "branding"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/03.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/03.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
+                th,
+                td {
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                    text-align: left;
+                }
 
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["photography"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/04.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/04.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
+                th {
+                    background-color: #a61d37;
+                    /* Very light gray */
+                    color: white;
+                }
 
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["advertising"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/05.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/05.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
+                caption {
+                    font-size: 1.5em;
+                    margin: 10px 0;
+                }
 
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["design", "advertising"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/06.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/06.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
+                .teaching {
+                    background-color: #f0f8ff;
+                    /* Alice Blue */
+                }
 
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["branding", "web"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/01.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/01.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
-                    </div>
-                </div>
-            </div>
+                .non-teaching {
+                    background-color: #ffebee;
+                    /* Very Light Pink */
+                }
+
+                .hospital {
+                    background-color: #fce4ec;
+                    /* Light Pink */
+                }
+
+                .view-report a {
+                    color: #002855;
+                    /* Blue color for links */
+                    text-decoration: none;
+                }
+
+                .view-report a:hover {
+                    text-decoration: underline;
+                }
+            </style>
+
+            <h3 class="text-center m-4">ATTENDANCE REPORT 2024</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Category</th>
+                        <th>Reports</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="teaching">
+                        <td>7 March 2024</td>
+                        <td>Teaching</td>
+                        <td class="view-report"><a href="path/to/report_7_march_2024.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="teaching">
+                        <td>4 February 2024</td>
+                        <td>Teaching</td>
+                        <td class="view-report"><a href="path/to/report_4_february_2024.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="teaching">
+                        <td>3 January 2024</td>
+                        <td>Teaching</td>
+                        <td class="view-report"><a href="path/to/report_3_january_2024.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="non-teaching">
+                        <td>9 March 2024</td>
+                        <td>Non-Teaching</td>
+                        <td class="view-report"><a href="path/to/report_9_march_2024.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="non-teaching">
+                        <td>5 February 2024</td>
+                        <td>Non-Teaching</td>
+                        <td class="view-report"><a href="path/to/report_5_february_2024.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="non-teaching">
+                        <td>2 January 2024</td>
+                        <td>Non-Teaching</td>
+                        <td class="view-report"><a href="path/to/report_2_january_2024.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="hospital">
+                        <td>8 March 2024</td>
+                        <td>Hospital</td>
+                        <td class="view-report"><a href="path/to/report_8_march_2024.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="hospital">
+                        <td>6 February 2024</td>
+                        <td>Hospital</td>
+                        <td class="view-report"><a href="path/to/report_6_february_2024.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="hospital">
+                        <td>1 January 2024</td>
+                        <td>Hospital</td>
+                        <td class="view-report"><a href="path/to/report_1_january_2024.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="text-center m-4 pt-5">ATTENDANCE REPORT 2023</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Category</th>
+                        <th>Reports</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Teaching -->
+                    <tr class="teaching">
+                        <td>12 December 2023</td>
+                        <td>Teaching</td>
+                        <td class="view-report"><a href="path/to/report_12_december_2023_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="teaching">
+                        <td>11 November 2023</td>
+                        <td>Teaching</td>
+                        <td class="view-report"><a href="path/to/report_11_november_2023_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="teaching">
+                        <td>10 October 2023</td>
+                        <td>Teaching</td>
+                        <td class="view-report"><a href="path/to/report_10_october_2023_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="teaching">
+                        <td>9 September 2023</td>
+                        <td>Teaching</td>
+                        <td class="view-report"><a href="path/to/report_9_september_2023_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="teaching">
+                        <td>8 August 2023</td>
+                        <td>Teaching</td>
+                        <td class="view-report"><a href="path/to/report_8_august_2023_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="teaching">
+                        <td>7 July 2023</td>
+                        <td>Teaching</td>
+                        <td class="view-report"><a href="path/to/report_7_july_2023_teaching.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="teaching">
+                        <td>6 June 2023</td>
+                        <td>Teaching</td>
+                        <td class="view-report"><a href="path/to/report_6_june_2023_teaching.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="teaching">
+                        <td>5 May 2023</td>
+                        <td>Teaching</td>
+                        <td class="view-report"><a href="path/to/report_5_may_2023_teaching.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="teaching">
+                        <td>4 April 2023</td>
+                        <td>Teaching</td>
+                        <td class="view-report"><a href="path/to/report_4_april_2023_teaching.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="teaching">
+                        <td>3 March 2023</td>
+                        <td>Teaching</td>
+                        <td class="view-report"><a href="path/to/report_3_march_2023_teaching.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="teaching">
+                        <td>2 February 2023</td>
+                        <td>Teaching</td>
+                        <td class="view-report"><a href="path/to/report_2_february_2023_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="teaching">
+                        <td>1 January 2023</td>
+                        <td>Teaching</td>
+                        <td class="view-report"><a href="path/to/report_1_january_2023_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+
+                    <!-- Non-Teaching -->
+                    <tr class="non-teaching">
+                        <td>12 December 2023</td>
+                        <td>Non-Teaching</td>
+                        <td class="view-report"><a href="path/to/report_12_december_2023_non_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="non-teaching">
+                        <td>11 November 2023</td>
+                        <td>Non-Teaching</td>
+                        <td class="view-report"><a href="path/to/report_11_november_2023_non_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="non-teaching">
+                        <td>10 October 2023</td>
+                        <td>Non-Teaching</td>
+                        <td class="view-report"><a href="path/to/report_10_october_2023_non_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="non-teaching">
+                        <td>9 September 2023</td>
+                        <td>Non-Teaching</td>
+                        <td class="view-report"><a href="path/to/report_9_september_2023_non_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="non-teaching">
+                        <td>8 August 2023</td>
+                        <td>Non-Teaching</td>
+                        <td class="view-report"><a href="path/to/report_8_august_2023_non_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="non-teaching">
+                        <td>7 July 2023</td>
+                        <td>Non-Teaching</td>
+                        <td class="view-report"><a href="path/to/report_7_july_2023_non_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="non-teaching">
+                        <td>6 June 2023</td>
+                        <td>Non-Teaching</td>
+                        <td class="view-report"><a href="path/to/report_6_june_2023_non_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="non-teaching">
+                        <td>5 May 2023</td>
+                        <td>Non-Teaching</td>
+                        <td class="view-report"><a href="path/to/report_5_may_2023_non_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="non-teaching">
+                        <td>4 April 2023</td>
+                        <td>Non-Teaching</td>
+                        <td class="view-report"><a href="path/to/report_4_april_2023_non_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="non-teaching">
+                        <td>3 March 2023</td>
+                        <td>Non-Teaching</td>
+                        <td class="view-report"><a href="path/to/report_3_march_2023_non_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="non-teaching">
+                        <td>2 February 2023</td>
+                        <td>Non-Teaching</td>
+                        <td class="view-report"><a href="path/to/report_2_february_2023_non_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="non-teaching">
+                        <td>1 January 2023</td>
+                        <td>Non-Teaching</td>
+                        <td class="view-report"><a href="path/to/report_1_january_2023_non_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+
+                    <!-- Hospital -->
+                    <tr class="hospital">
+                        <td>12 December 2023</td>
+                        <td>Hospital</td>
+                        <td class="view-report"><a href="path/to/report_12_december_2023_hospital.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="hospital">
+                        <td>11 November 2023</td>
+                        <td>Hospital</td>
+                        <td class="view-report"><a href="path/to/report_11_november_2023_hospital.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="hospital">
+                        <td>10 October 2023</td>
+                        <td>Hospital</td>
+                        <td class="view-report"><a href="path/to/report_10_october_2023_hospital.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="hospital">
+                        <td>9 September 2023</td>
+                        <td>Hospital</td>
+                        <td class="view-report"><a href="path/to/report_9_september_2023_hospital.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="hospital">
+                        <td>8 August 2023</td>
+                        <td>Hospital</td>
+                        <td class="view-report"><a href="path/to/report_8_august_2023_hospital.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="hospital">
+                        <td>7 July 2023</td>
+                        <td>Hospital</td>
+                        <td class="view-report"><a href="path/to/report_7_july_2023_hospital.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="hospital">
+                        <td>6 June 2023</td>
+                        <td>Hospital</td>
+                        <td class="view-report"><a href="path/to/report_6_june_2023_hospital.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="hospital">
+                        <td>5 May 2023</td>
+                        <td>Hospital</td>
+                        <td class="view-report"><a href="path/to/report_5_may_2023_hospital.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="hospital">
+                        <td>4 April 2023</td>
+                        <td>Hospital</td>
+                        <td class="view-report"><a href="path/to/report_4_april_2023_hospital.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="hospital">
+                        <td>3 March 2023</td>
+                        <td>Hospital</td>
+                        <td class="view-report"><a href="path/to/report_3_march_2023_hospital.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="hospital">
+                        <td>2 February 2023</td>
+                        <td>Hospital</td>
+                        <td class="view-report"><a href="path/to/report_2_february_2023_hospital.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="hospital">
+                        <td>1 January 2023</td>
+                        <td>Hospital</td>
+                        <td class="view-report"><a href="path/to/report_1_january_2023_hospital.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="text-center m-4 pt-5">ATTENDANCE REPORT 2022</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Category</th>
+                        <th>Reports</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Teaching -->
+                    <tr class="teaching">
+                        <td>July 2022</td>
+                        <td>Teaching</td>
+                        <td class="view-report"><a href="path/to/report_july_2022_teaching.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="teaching">
+                        <td>June 2022</td>
+                        <td>Teaching</td>
+                        <td class="view-report"><a href="path/to/report_june_2022_teaching.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="teaching">
+                        <td>May 2022</td>
+                        <td>Teaching</td>
+                        <td class="view-report"><a href="path/to/report_may_2022_teaching.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="teaching">
+                        <td>April 2022</td>
+                        <td>Teaching</td>
+                        <td class="view-report"><a href="path/to/report_april_2022_teaching.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="teaching">
+                        <td>March 2022</td>
+                        <td>Teaching</td>
+                        <td class="view-report"><a href="path/to/report_march_2022_teaching.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="teaching">
+                        <td>February 2022</td>
+                        <td>Teaching</td>
+                        <td class="view-report"><a href="path/to/report_february_2022_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="teaching">
+                        <td>January 2022</td>
+                        <td>Teaching</td>
+                        <td class="view-report"><a href="path/to/report_january_2022_teaching.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+
+                    <!-- Non-Teaching -->
+                    <tr class="non-teaching">
+                        <td>July 2022</td>
+                        <td>Non-Teaching</td>
+                        <td class="view-report"><a href="path/to/report_july_2022_non_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="non-teaching">
+                        <td>June 2022</td>
+                        <td>Non-Teaching</td>
+                        <td class="view-report"><a href="path/to/report_june_2022_non_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="non-teaching">
+                        <td>May 2022</td>
+                        <td>Non-Teaching</td>
+                        <td class="view-report"><a href="path/to/report_may_2022_non_teaching.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="non-teaching">
+                        <td>April 2022</td>
+                        <td>Non-Teaching</td>
+                        <td class="view-report"><a href="path/to/report_april_2022_non_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="non-teaching">
+                        <td>March 2022</td>
+                        <td>Non-Teaching</td>
+                        <td class="view-report"><a href="path/to/report_march_2022_non_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="non-teaching">
+                        <td>February 2022</td>
+                        <td>Non-Teaching</td>
+                        <td class="view-report"><a href="path/to/report_february_2022_non_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="non-teaching">
+                        <td>January 2022</td>
+                        <td>Non-Teaching</td>
+                        <td class="view-report"><a href="path/to/report_january_2022_non_teaching.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+
+                    <!-- Hospital -->
+                    <tr class="hospital">
+                        <td>July 2022</td>
+                        <td>Hospital</td>
+                        <td class="view-report"><a href="path/to/report_july_2022_hospital.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="hospital">
+                        <td>June 2022</td>
+                        <td>Hospital</td>
+                        <td class="view-report"><a href="path/to/report_june_2022_hospital.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="hospital">
+                        <td>May 2022</td>
+                        <td>Hospital</td>
+                        <td class="view-report"><a href="path/to/report_may_2022_hospital.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="hospital">
+                        <td>April 2022</td>
+                        <td>Hospital</td>
+                        <td class="view-report"><a href="path/to/report_april_2022_hospital.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="hospital">
+                        <td>March 2022</td>
+                        <td>Hospital</td>
+                        <td class="view-report"><a href="path/to/report_march_2022_hospital.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="hospital">
+                        <td>February 2022</td>
+                        <td>Hospital</td>
+                        <td class="view-report"><a href="path/to/report_february_2022_hospital.pdf"
+                                target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                    <tr class="hospital">
+                        <td>January 2022</td>
+                        <td>Hospital</td>
+                        <td class="view-report"><a href="path/to/report_january_2022_hospital.pdf" target="_blank">Click Here to View Report<i style="margin-left: 7px;" class="fas fa-external-link-alt"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
     <!--=================================
-    Gallery -->
+    Attendance -->
 
     <!--=================================
     Call to action -->
