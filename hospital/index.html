@@ -235,118 +235,1086 @@
     inner-header -->
 
     <!--=================================
-    Gallery -->
-    <section class="space-ptb">
+    Hospital -->
+
+    <style>
+        /* Principal Section */
+        .bg-light {
+            background-color: #f8f9fa;
+        }
+
+        .section-title {
+            margin-bottom: 1.5rem;
+        }
+
+        .title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .quote {
+            position: relative;
+            font-style: italic;
+        }
+
+        .quote-mark {
+            font-size: 4rem;
+            color: #a61d37;
+            font-weight: bold;
+            position: absolute;
+            line-height: 1;
+        }
+
+        .quote-mark:first-child {
+            top: -0.5rem;
+            left: -0.5rem;
+        }
+
+        .quote-mark:last-child {
+            bottom: -1rem;
+            right: -1rem;
+        }
+
+        .team-img-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.25rem;
+        }
+
+        .team-img {
+            transition: transform 0.3s ease;
+        }
+
+        .team-img-wrapper:hover .team-img {
+            transform: scale(1.05);
+        }
+
+        .team-info {
+            text-align: center;
+        }
+
+        .team-name {
+            display: block;
+            font-weight: bold;
+            font-size: 1.25rem;
+            margin-top: 1rem;
+        }
+
+        .team-leader {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+
+        .list-unstyled {
+            padding: 0;
+            list-style: none;
+        }
+
+        .list-unstyled li {
+            margin-bottom: 0.5rem;
+        }
+
+        .border-radius {
+            border-radius: 0.25rem;
+        }
+    </style>
+    </style>
+
+    <section class="space-ptb bg-light">
         <div class="container">
-            <!-- <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10 text-center">
-                    <div class="section-title">
-                        <h2>Our Gallery</h2>
+            <div style="display: flex; gap: 50px 20px;" class="row align-items-center">
+                <div class="col-lg-4 col-md-6 p-1 col-sm-6 mb-4 mb-md-0">
+                    <div class="team">
+                        <div class="team-img-wrapper">
+                            <img class="img-fluid team-img"
+                                src="images/team/Shree-Lakshmi-Narayan-College-and-Hospital-Principal-Mam-Doctor-Minaxi-Arora.png"
+                                alt="">
+                        </div>
+                        <div class="team-info" style="padding: 20px 10px; padding-top: 10px;">
+                            <a class="team-name">DR.RAJEEV SOOD</a>
+                            <p class="team-leader" style="margin: 0;">MEDICAL SUPERINTENDENT</p>
+                        </div>
                     </div>
                 </div>
-            </div> -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="filters-group mb-lg-4 text-center">
-                        <button class="btn-filter  active" data-group="all">All</button>
-                        <button class="btn-filter" data-group="awards">Awards</button>
-                        <button class="btn-filter" data-group="infrastructure">Infrastructure</button>
-                        <button class="btn-filter" data-group="campus">Campus Life</button>
-                        <button class="btn-filter" data-group="festivals">Festivals</button>
-                        <button class="btn-filter" data-group="clinical">Clinical Training</button>
-                        <button class="btn-filter" data-group="seminars">Seminars</button>
-                    </div>
-                    <div class="my-shuffle-container columns-3 popup-gallery full-screen">
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["branding"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/02.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/02.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
-
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["web", "photography", "branding"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/03.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/03.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
-
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["photography"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/04.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/04.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
-
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["advertising"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/05.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/05.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
-
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["design", "advertising"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/06.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/06.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
-
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["branding", "web"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/01.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/01.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
+                <div class="col-lg-7">
+                    <div class="section-title">
+                        <h3 class="mb-3">DR.RAJEEV SOOD</h3>
+                        <ul>
+                            <li><strong>Qualification:</strong> B.A.M.S., M.D. (Kayachikitsa)</li>
+                            <li><strong>D.O.B.:</strong> September 26, 1974</li>
+                            <li><strong>D.O.J.:</strong> August 11, 2005</li>
+                            <li><strong>Registration No.:</strong> 9975 (Punjab)</li>
+                            <li><strong>Address:</strong> Ranjit Avenue, Amritsar</li>
+                            <li><strong>Contact No.:</strong> 7889267121</li>
+                            <li><strong>Email:</strong> <a href="mailto:soodrajeev@gmail.com">soodrajeev@gmail.com</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="space-pt">
+        <div class="container">
+            <h2 class="section-title">General Hospital</h2>
+            <p>Shree Lakshmi Narayan Ayurvedic College & Hospital, Amritsar is situated in the heart of the city at Sant
+                Tulsidass Marg near Durgiana Mandir O/s Lohgarh gate, Amritsar. It is a 60 bedded hospital. Apart from
+                it there are 2 beds in private room and 2 beds in Emergency section. The College is running regular OPDs
+                of all specialties. Patients with various chronic diseases are being cured here successfully. Facilities
+                of OT and Labour room are also available here.</p>
+            <p>Various OPD’s of different specialties give their services to the patients under the expert hands of
+                qualified and specialist doctors. We are having 7 OPD’s:</p>
+            <ul>
+                <li>Kayachikitsa</li>
+                <li>Panchakarma</li>
+                <li>Shalya Tantra</li>
+                <li>Shalakya Tantra</li>
+                <li>Prasuti Tantra Evum Stree Roga</li>
+                <li>Kaumarabhritya/Bal Roga</li>
+                <li>Swastha Vritta/Yoga & Physiotherapy</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="space-ptb pt-3">
+        <div class="container">
+            <h2 class="section-title">Departments</h2>
+            <!-- Kaya Chikitsa -->
+            <div class="department">
+                <h3 class="department-title">1. Department of Kaya Chikitsa</h3>
+                <h5>Consulting Doctors (Faculty)</h5>
+                <ol>
+                    <li>Dr. Ritesh Chawla M.D. (Ay) Prof.</li>
+                    <li>Dr. Priyanka Bhatt M.D. (Ay) Lecturer</li>
+                    <li>Dr. Pallavi Sharma M.D. (Ay) Lecturer</li>
+                </ol>
+                <p>This is the prime branch of Ayurveda which is akin to General Medicine in Ayurveda. This department
+                    not only deals with the curative measures i.e. with medicines but also the preventive aspects too.
+                    It deals with the diseases by means of Shodhana (purification), Shamana (Pacification) and
+                    Satwawajaya (Counselling).</p>
+                <p>A regular functioning OPD and IPD of this department deals not only with acute but also the chronic
+                    diseases and also make it feasible for the students to learn those skills properly with ample
+                    practical exposure.</p>
+            </div>
+
+            <!-- Panchakarma -->
+            <div class="department pt-3">
+                <h3 class="department-title">2. Department of Panchakarma</h3>
+                <h5>Consulting Doctors (Faculty)</h5>
+                <ol>
+                    <li>Dr. Rajeev Sood M.D. (Ay) Prof and Head</li>
+                    <li>Dr. Varun Bhagat M.D. (Ay) Lecturer</li>
+                </ol>
+                <p>Department of Panchakarma is the core heart of Hospital. Our department is constructively engaged in
+                    the revival of an affordable, reliable and proven Ayurvedic health care system.</p>
+                <p>Motto: – To create an environment where individuals and groups of people are healed, rejuvenated and
+                    re-energized to experience a healthy way of life. All Panchakarma procedures are carried out by
+                    trained therapists with the complete availability for carrying out procedures. In addition to this
+                    Keraliya Panchakarma is also carried out here. We perform more than 10,000 therapies every year.</p>
+                <h5>Treatments carried out here:</h5>
+                <ul>
+                    <li>Abhyanga</li>
+                    <li>Bashpa Sweda</li>
+                    <li>Nadi Swedana</li>
+                    <li>Kati Basti</li>
+                    <li>Greeva Basti</li>
+                    <li>Akshitarpana</li>
+                    <li>Kaya seka</li>
+                    <li>Patra Pottali Swedana</li>
+                    <li>Shashtika Shalli Pinda Swedana</li>
+                    <li>Shirodhara</li>
+                    <li>Shiro basti</li>
+                    <li>Udwartana</li>
+                    <li>Lepa</li>
+                    <li>Vamana</li>
+                    <li>Virechana</li>
+                    <li>Nasya</li>
+                    <li>Basti</li>
+                    <li>Rakta Mokshana</li>
+                </ul>
+            </div>
+
+            <!-- Shalya Tantra -->
+            <div class="department pt-3">
+                <h3 class="department-title">3. Department of Shalya Tantra (General Surgery)</h3>
+                <h5>Consulting Doctors:</h5>
+                <ol>
+                    <li>Dr. Paramjit Singh M.S. (Ay) Reader</li>
+                    <li>Dr. Ankit Saini M.S. (Ay) Lecturer</li>
+                </ol>
+                <p>Shalya Tantra is one of the main branches of Ayurveda which deals with the diagnosis and management
+                    of diseases that require conservative, para-surgical or surgical intervention.</p>
+                <h5>Facilities Available:</h5>
+                <ul>
+                    <li>Outdoor Patient facility for all surgical disorders like Piles, Fistula, Appendix, Hernia etc.
+                    </li>
+                    <li>Kshara Sutra treatment for Piles, Fistula-in-Ano, Fissure & Pilonidal sinus with less
+                        reoccurrence rate.</li>
+                    <li>Agnikarma (Thermal Cauterization) & Kshara Karma (Chemical Cauterization) for surgical
+                        disorders.</li>
+                    <li>Blood Letting by leeches (Jalouka) & Sira Vedha ( Vene Puncture ) is also carried out in Shalya
+                        Department.</li>
+                    <li>All general surgical Procedures are also carried out here.</li>
+                </ul>
+            </div>
+
+            <!-- Shalakya Tantra -->
+            <div class="department pt-3">
+                <h3 class="department-title">4. Department of Shalakya Tantra</h3>
+                <h5>Consulting Doctors (Faculty):</h5>
+                <ol>
+                    <li>Dr. Monika Singla M.S. (Ay) Prof. & Head</li>
+                    <li>Dr. Jaswinder Singh M.S. (Ay) Lecturer</li>
+                </ol>
+                <p>This department deals with the treatment of diseases related to the parts of the body situated above
+                    the neck. These are mainly the diseases of Ear, Nose, Throat, Oral cavity and eyes. Shalakya Tantra
+                    covers most of the specialties which are coming under the purview of modern E.N.T.</p>
+            </div>
+
+            <!-- Prasuti Tantra Evum Stree Roga -->
+            <div class="department pt-3">
+                <h3 class="department-title">5. Department of Prasuti Tantra Evum Stree Roga</h3>
+                <h5>Consulting Doctors (Faculty):</h5>
+                <ol>
+                    <li>Dr. Poonam M.S. (Ay) Reader</li>
+                    <li>Dr. Harman Dhillon M.S. (Ay) Lecturer</li>
+                </ol>
+                <p>This department deals with the treatment of antenatal care of pregnant women, post-natal care,
+                    diseases related to female reproductive system & management of labour. The department of Prasuti
+                    Tantra evam Stree Roga has facilities for the management of all Gynecological diseases including
+                    Antenatal, Natal, and Post-natal care with the advanced techniques and Ayurveda modalities of
+                    treatment.</p>
+            </div>
+
+            <!-- Kaumarabhritya / Bal Roga -->
+            <div class="department pt-3">
+                <h3 class="department-title">6. Department of Kaumarabhritya / Bal Roga</h3>
+                <h5>Consulting Doctors (Faculty):</h5>
+                <ol>
+                    <li>Dr. Monika Singla M.D. (Ay) Reader</li>
+                </ol>
+                <p>This department deals with the prevention and cure of diseases related to children. This department
+                    deals with the treatment of diseases like: Balaroga (Pediatrics), Prasooti Tantra (Obstetrics),
+                    Stree Roga (Gynecology) etc. This department also takes care of the health of children from neonates
+                    to adolescents. The department also takes care of the health of mothers from antenatal to postnatal
+                    care.</p>
+            </div>
+
+            <!-- Swastha Vritta / Yoga & Physiotherapy -->
+            <div class="department pt-3">
+                <h3 class="department-title">7. Department of Swastha Vritta / Yoga & Physiotherapy</h3>
+                <h5>Consulting Doctors (Faculty):</h5>
+                <ol>
+                    <li>Dr. Yudhvir Singh M.D. (Ay) Prof.</li>
+                    <li>Dr. Rajinder Kaur M.D. (Ay) Lecturer</li>
+                </ol>
+                <p>This department is engaged in training and teaching of preventive and promotive aspects of health.
+                    This department deals with the promotion of health and prevention of diseases through diet,
+                    lifestyle and behavioral changes. It also deals with the treatment of various diseases through Yoga
+                    and Naturopathy. The regular OPD of Swasthavritta & Yoga Department is running successfully in our
+                    hospital.</p>
+            </div>
+
+            <!-- AGAD TANTRA -->
+            <div class="department pt-3">
+                <h3 class="department-title">8. Department of Agad Tantra</h3>
+                <h5>Consulting Doctors (Faculty):</h5>
+                <ol>
+                    <li>Dr. Reeta Abrol M.D. (Ay) Prof. & HOD</li>
+                    <li>Dr. Manpreet M.D. (Ay) Lecturer</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .management-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+
+        .management-table thead {
+            background-color: #a61d37;
+            color: white;
+        }
+
+        .management-table th,
+        .management-table td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+        }
+
+        @media (max-width: 500px) {
+
+            .management-table th,
+            .management-table td {
+                padding: 8px 10px;
+                font-size: 14px;
+            }
+
+            .container-custom {
+                padding: 0;
+            }
+        }
+
+        .management-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        .management-table tbody tr:nth-of-type(odd) {
+            background-color: #ffffff;
+        }
+
+        .management-table tbody tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+
+    <section class="space-ptb pt-0">
+        <div class="container">
+            <h2>Detail of Clinical Material in the Hospital</h2>
+            <h3>Kayachikitsa</h3>
+            <table class="management-table">
+                <thead>
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Equipments, Instruments, Furniture</th>
+                        <th>Count/Availability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>X-Ray Viewing Box</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>BP Apparatus</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Stethoscope</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Examination Table</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Thermometer</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Tongue Depressor</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Torch</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Gloves</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Measuring Tape</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Weight & Height Measuring Stand</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Knee Hammer</td>
+                        <td>2</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="pt-5">Shalya Tantra</h3>
+            <table class="management-table">
+                <thead>
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Equipments, Instruments, Furniture</th>
+                        <th>Count/Availability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Minor OT</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Instruments for Anorectal Examination</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Examination Table</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>BP Apparatus</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Thermometer</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Surgical Blades</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>X-Ray Viewing Box</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Stethoscope</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Cheetle’s forceps</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Torch</td>
+                        <td>Available</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="pt-5">Shalakya Tantra</h3>
+            <table class="management-table">
+                <thead>
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Equipments, Instruments, Furniture</th>
+                        <th>Count/Availability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Tuning forks</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ophthalmoscope/ fundoscope</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Auroscope</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Examination table</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>X-Ray Viewing Box</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>BP Apparatus</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Stethoscope</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Thermometer</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>ENT Kit</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Torch</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Bull’s Lamp</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="pt-5">Prasuti Tantra & Stri Roga</h3>
+            <table class="management-table">
+                <thead>
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Equipments, Instruments, Furniture</th>
+                        <th>Count/Availability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Weight Machine</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Sim’s Speculum</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Thermometer</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Cusco’s Speculum</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Examination Table</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Lamp Stand</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Torch</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>X-Ray Viewing Box</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>BP Apparatus</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Stethoscope</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Measuring Tape</td>
+                        <td>2</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="pt-5">Bal Roga</h3>
+            <table class="management-table">
+                <thead>
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Equipments, Instruments, Furniture</th>
+                        <th>Count/Availability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Scale</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Weighing Machine</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Torch</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>X-Ray View Box</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Thermometer</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>BP Apparatus</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Stethoscope</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Examination Table</td>
+                        <td>Available</td>
+                    </tr>
+                </tbody>
+            </table>
+            </table>
+
+            <h3 class="pt-5">Panchkarma</h3>
+            <table class="management-table">
+                <thead>
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Equipments, Instruments, Furniture</th>
+                        <th>Count/Availability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>X-Ray View Box</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>BP Apparatus</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Stethoscope</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Examination Table</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Thermometer</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Tongue Depressor</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Torch</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Measuring Tape</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Weight & Height Measuring Stand</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Knee Hammer</td>
+                        <td>2</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="pt-5">List of the Hospital Staff</h3>
+            <table class="management-table">
+                <thead>
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Name</th>
+                        <th>Designation</th>
+                        <th>Employee ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Dr Krishan Gopal Sharma</td>
+                        <td>Dy. Medical Superintendent</td>
+                        <td>H 35</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Dr. Vishal Shridhar</td>
+                        <td>E.M.O</td>
+                        <td>H 11</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Dr. A.V.Hemadri</td>
+                        <td>R.M.O</td>
+                        <td>H 69</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Dr. Jaspinder Kaur</td>
+                        <td>E.M.O</td>
+                        <td>H 130</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Dr. Avtar Singh</td>
+                        <td>R.M.O</td>
+                        <td>H 58</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Dr. Shally</td>
+                        <td>R.M.O</td>
+                        <td>H 84</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Mr. Ranjeet Singh Maliya</td>
+                        <td>RMO</td>
+                        <td>H 09</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Dr. Roha</td>
+                        <td>R.M.O</td>
+                        <td>H 68</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Dr.Neha</td>
+                        <td>R.M.O</td>
+                        <td>H 137</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Dr.Sukhpreet Kaur</td>
+                        <td>Physiotherapist</td>
+                        <td>H 15</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Miss Heena</td>
+                        <td>Yoga Teacher</td>
+                        <td>H 87</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Mrs Paramjeet Kaur</td>
+                        <td>Matron</td>
+                        <td>H 24</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Mrs. Kiranpreet Kaur</td>
+                        <td>Asst.Matron</td>
+                        <td>H 18</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Ms Neha</td>
+                        <td>Staff Nurse</td>
+                        <td>H 38</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Hardeep Kaur</td>
+                        <td>Staff Nurse</td>
+                        <td>H 140</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>Amandeep Kaur</td>
+                        <td>Staff Nurse</td>
+                        <td>H 53</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>Rachna</td>
+                        <td>Staff Nurse</td>
+                        <td>H 60</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>Sneha</td>
+                        <td>Staff Nurse</td>
+                        <td>H 81</td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>Sukhcharan Kaur</td>
+                        <td>Staff Nurse</td>
+                        <td>H 125</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>Ms.Sakshi Sharma</td>
+                        <td>Staff Nurse</td>
+                        <td>H 45</td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>Miss Geeta</td>
+                        <td>Staff Nurse</td>
+                        <td>H 59</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>Mr Sham Chaudhary</td>
+                        <td>Pharmacist</td>
+                        <td>H 33</td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td>Mr.Vishal Salwan</td>
+                        <td>Pharmacist</td>
+                        <td>H 61</td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td>Mr. Vikas Shridhar</td>
+                        <td>Dresser</td>
+                        <td>H 39</td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>Mr. Parveen Kumar</td>
+                        <td>Dresser</td>
+                        <td>H 34</td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>Mr. Ajay</td>
+                        <td>Storekeeper</td>
+                        <td>H 49</td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td>Mr.Varinder Kumar</td>
+                        <td>X-Ray Technician</td>
+                        <td>H 133</td>
+                    </tr>
+                    <tr>
+                        <td>28</td>
+                        <td>Miss.Aarti</td>
+                        <td>Data Entry Operator</td>
+                        <td>H 30</td>
+                    </tr>
+                    <tr>
+                        <td>29</td>
+                        <td>Miss.Alisha</td>
+                        <td>Data Entry Operator</td>
+                        <td>H 71</td>
+                    </tr>
+                    <tr>
+                        <td>30</td>
+                        <td>Ms.Komal</td>
+                        <td>Data Entry Operator</td>
+                        <td>H 63</td>
+                    </tr>
+                    <tr>
+                        <td>31</td>
+                        <td>Mr. Vishal Sharma</td>
+                        <td>Lab Technician</td>
+                        <td>H 32</td>
+                    </tr>
+                    <tr>
+                        <td>32</td>
+                        <td>Sakshi</td>
+                        <td>Data Entry Operator</td>
+                        <td>H 85</td>
+                    </tr>
+                    <tr>
+                        <td>33</td>
+                        <td>Mr.Neeraj Bedi</td>
+                        <td>Lab Technician</td>
+                        <td>H 31</td>
+                    </tr>
+                    <tr>
+                        <td>34</td>
+                        <td>Mr. Harmohinder Singh</td>
+                        <td>Panchkarma Assistant</td>
+                        <td>H 29</td>
+                    </tr>
+                    <tr>
+                        <td>35</td>
+                        <td>Mr. Raghu Sharma</td>
+                        <td>Panchkarma Assistant</td>
+                        <td>H 46</td>
+                    </tr>
+                    <tr>
+                        <td>36</td>
+                        <td>Mr. Manpreet Singh</td>
+                        <td>OT Attendant</td>
+                        <td>H 47</td>
+                    </tr>
+                    <tr>
+                        <td>37</td>
+                        <td>Mr.Ravinder Singh</td>
+                        <td>O.T Attendant</td>
+                        <td>H 44</td>
+                    </tr>
+                    <tr>
+                        <td>38</td>
+                        <td>Mrs.Sunita Sharma</td>
+                        <td>Panchkarma Assistant</td>
+                        <td>H 25</td>
+                    </tr>
+                    <tr>
+                        <td>39</td>
+                        <td>Mrs.Sharda</td>
+                        <td>Panchkarma Assistant</td>
+                        <td>H 26</td>
+                    </tr>
+                    <tr>
+                        <td>40</td>
+                        <td>Mrs.Suman Khosla</td>
+                        <td>Midwife</td>
+                        <td>H 22</td>
+                    </tr>
+                    <tr>
+                        <td>41</td>
+                        <td>Mr.Deepak Kumar</td>
+                        <td>Ward Boy</td>
+                        <td>H 37</td>
+                    </tr>
+                    <tr>
+                        <td>42</td>
+                        <td>Mrs.Balwinder Kaur</td>
+                        <td>Aaya</td>
+                        <td>H 36</td>
+                    </tr>
+                    <tr>
+                        <td>43</td>
+                        <td>Mrs.Paramjeet Kaur</td>
+                        <td>Aaya</td>
+                        <td>H 35</td>
+                    </tr>
+                    <tr>
+                        <td>44</td>
+                        <td>Sapna</td>
+                        <td>Aaya</td>
+                        <td>H 92</td>
+                    </tr>
+                    <tr>
+                        <td>45</td>
+                        <td>Sarabhjit Kaur</td>
+                        <td>Cook</td>
+                        <td>H 16</td>
+                    </tr>
+                    <tr>
+                        <td>46</td>
+                        <td>Mr.Naresh</td>
+                        <td>Electrician</td>
+                        <td>H 52</td>
+                    </tr>
+                    <tr>
+                        <td>47</td>
+                        <td>Jagat Ram</td>
+                        <td>Washerman</td>
+                        <td>H 89</td>
+                    </tr>
+                    <tr>
+                        <td>48</td>
+                        <td>Sonia Sharma</td>
+                        <td>Masseur</td>
+                        <td>H 112</td>
+                    </tr>
+                    <tr>
+                        <td>49</td>
+                        <td>Mr.Gurpreet Singh</td>
+                        <td>Driver</td>
+                        <td>H 51</td>
+                    </tr>
+                    <tr>
+                        <td>50</td>
+                        <td>Mrs.Radha</td>
+                        <td>Dark Room Attendant</td>
+                        <td>H 48</td>
+                    </tr>
+                    <tr>
+                        <td>51</td>
+                        <td>Mr.Danish</td>
+                        <td>Security Guard</td>
+                        <td>H 96</td>
+                    </tr>
+                    <tr>
+                        <td>52</td>
+                        <td>Mrs.Kanta Rani</td>
+                        <td>Others</td>
+                        <td>H 40</td>
+                    </tr>
+                    <tr>
+                        <td>53</td>
+                        <td>Mr.Sukhbir</td>
+                        <td>Others</td>
+                        <td>H 82</td>
+                    </tr>
+                    <tr>
+                        <td>54</td>
+                        <td>Mr. Ved Parkash</td>
+                        <td>Peon or Attendant</td>
+                        <td>H 50</td>
+                    </tr>
+                    <tr>
+                        <td>55</td>
+                        <td>Mrs.Shobha</td>
+                        <td>Others</td>
+                        <td>H 141</td>
+                    </tr>
+                    <tr>
+                        <td>56</td>
+                        <td>Mr. Jiwan Lal</td>
+                        <td>Bone Setter</td>
+                        <td>H 111</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
     <!--=================================
-    Gallery -->
+    Hospital -->
 
     <!--=================================
     Call to action -->

@@ -423,6 +423,132 @@
   <!--=================================
     Counter -->
 
+
+  <style>
+    /* Principal Section */
+    .bg-light {
+      background-color: #f8f9fa;
+    }
+
+    .section-title {
+      margin-bottom: 1.5rem;
+    }
+
+    .title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .quote {
+      position: relative;
+      font-style: italic;
+    }
+
+    .quote-mark {
+      font-size: 4rem;
+      color: #a61d37;
+      font-weight: bold;
+      position: absolute;
+      line-height: 1;
+    }
+
+    .quote-mark:first-child {
+      top: -0.5rem;
+      left: -0.5rem;
+    }
+
+    .quote-mark:last-child {
+      bottom: -1rem;
+      right: -1rem;
+    }
+
+    .team-img-wrapper {
+      position: relative;
+      overflow: hidden;
+      border-radius: 0.25rem;
+    }
+
+    .team-img {
+      transition: transform 0.3s ease;
+    }
+
+    .team-img-wrapper:hover .team-img {
+      transform: scale(1.05);
+    }
+
+    .team-info {
+      text-align: center;
+    }
+
+    .team-name {
+      display: block;
+      font-weight: bold;
+      font-size: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    .team-leader {
+      font-size: 1rem;
+      color: #6c757d;
+    }
+
+    .list-unstyled {
+      padding: 0;
+      list-style: none;
+    }
+
+    .list-unstyled li {
+      margin-bottom: 0.5rem;
+    }
+
+    .border-radius {
+      border-radius: 0.25rem;
+    }
+  </style>
+
+  <!-- Principal Section -->
+  <section class="space-ptb bg-light">
+    <div class="container">
+      <div style="display: flex; gap: 50px 20px;" class="row align-items-center">
+        <div class="col-lg-4 col-md-6 p-1 col-sm-6 mb-4 mb-md-0">
+          <div class="team">
+            <div class="team-img-wrapper">
+              <img class="img-fluid team-img"
+                src="images/team/Shree-Lakshmi-Narayan-College-and-Hospital-Principal-Mam-Doctor-Minaxi-Arora.png"
+                alt="">
+            </div>
+            <div class="team-info" style="padding: 20px 10px; padding-top: 10px;">
+              <a class="team-name">Dr. Minaxi Arora</a>
+              <p class="team-leader" style="margin: 0;">Principal</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="section-title">
+            <h2 class="title">Message from the Principal</h2>
+            <div class="quote">
+              <span class="quote-mark">“</span>
+              <p class="lead"> &nbsp;&nbsp;&nbsp;Welcome to Shree Lakshmi Narayan Ayurvedic College & Hospital. Our institution is
+                dedicated to excellence in education and healthcare. We strive to provide our students with the best
+                possible learning experience and prepare them for a successful career in Ayurveda.</p>
+            </div>
+            <h4 class="mb-3">Dr. Minaxi Arora</h4>
+            <ul class="list-unstyled">
+              <li><strong>Qualification:</strong> BAMS, M.D. (Dravyaguna), Ph.D</li>
+              <li><strong>Registration No.:</strong> 9975 (Punjab)</li>
+              <li><strong>Date of Birth:</strong> September 26, 1974</li>
+              <li><strong>Date of Joining:</strong> August 11, 2005</li>
+              <li><strong>Address:</strong> F-7/126, Kashmir Avenue, Amritsar</li>
+              <li><strong>Phone:</strong> 7009670235, 6239764882</li>
+              <li><strong>Email:</strong> <a href="mailto:minaxim74@gmail.com">minaxim74@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!--=================================
     Action box -->
   <section class="space-ptb bg-overlay-black-80 bg-holder" data-jarallax='{"speed": 0.5}'
@@ -807,7 +933,7 @@
                           </div>
                         </div>
                         <div class="col-lg-3 align-self-center text-lg-right text-left">
-                          <a class="btn btn-dark btn-round" href="#">Join Event</a>
+                          <button disabled class="btn btn-dark btn-round">Event Over</button>
                         </div>
                       </div>
                     </div>
@@ -837,7 +963,7 @@
                           </div>
                         </div>
                         <div class="col-lg-3 align-self-center text-lg-right text-left">
-                          <a class="btn btn-dark btn-round" href="#">Join Event</a>
+                          <button disabled class="btn btn-dark btn-round">Event Over</button>
                         </div>
                       </div>
                     </div>
@@ -867,7 +993,7 @@
                           </div>
                         </div>
                         <div class="col-lg-3 align-self-center text-lg-right text-left">
-                          <a class="btn btn-dark btn-round" href="#">Join Event</a>
+                          <button disabled class="btn btn-dark btn-round">Event Over</button>
                         </div>
                       </div>
                     </div>
@@ -905,8 +1031,9 @@
                 alt="">
             </div>
             <div style="padding: 30px 10px;" class="team-info">
-              <a href="teachers-single.html" class="team-name">Sh. Ramesh Chander Sharma</a>
-              <p style="margin: 0;" class="team-leader">President</p>
+              <a class="team-name">Sh. Ramesh Chander Sharma</a>
+              <p style="margin: 0;position: relative;right: 10px;" class="team-leader"> <i
+                  style="color: rgb(235, 200, 2);margin-right: 3px;" class="fas fa-chess-king"></i> President</p>
               <!-- <ul class="list-unstyled">
                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -922,7 +1049,7 @@
               src="images/team/Shree-Lakshmi-Narayan-College-and-Hospital-Board-Member-Vice-President-Chandershekhar-Sharma.png"
               alt="">
             <div style="padding: 30px 10px;" class="team-info">
-              <a href="teachers-single.html" class="team-name">Sh. Chanderchekhar Sharma</a>
+              <a class="team-name">Sh. Chanderchekhar Sharma</a>
               <p style="margin: 0;" class="team-leader">Vice President</p>
               <!-- <ul class="list-unstyled">
                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -941,7 +1068,7 @@
                 alt="">
             </div>
             <div style="padding: 30px 10px;" class="team-info">
-              <a href="teachers-single.html" class="team-name">Sh. D.P. Gupta</a>
+              <a class="team-name">Sh. D.P. Gupta</a>
               <p style="margin: 0;" class="team-leader">General Secretary</p>
               <!-- <ul class="list-unstyled">
                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
