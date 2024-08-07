@@ -236,26 +236,96 @@
 
     <!--=================================
     Gallery -->
+
+    <style>
+        .link-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 10px 10px 16px #ebebeb,
+                -10px -10px 16px #ffffff;
+        }
+
+        .link-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 9px 9px 18px #cccccc,
+                -9px -9px 18px #ffffff;
+        }
+
+        .link-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            transition: transform 0.3s;
+            width: 300px;
+            /* Set width */
+            height: 200px;
+            /* Set height */
+            object-fit: cover;
+            /* Ensure aspect ratio is maintained */
+            border-radius: 8px;
+        }
+
+        .link-card img:hover {
+            transform: scale(1.05);
+        }
+
+        .link-card h4 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .link-card a {
+            display: block;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .link-card .btn {
+            color: #fff;
+            text-transform: uppercase;
+            border-radius: 4px;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+        .custom-affiliation {
+            flex-wrap: nowrap;
+            gap: 40px 20px;
+        }
+
+        @media (max-width: 1200px) {
+            .custom-affiliation {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+
     <section class="space-ptb">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4 link-card">
-                    <img src="path/to/your/image1.jpg" alt="NCISM">
+            <div class="row justify-content-center custom-affiliation">
+                <div class="col-md-4 mb-4 link-card">
+                    <div><img src="../images/partners/National-Commission-for-Indian-System-of-Medicine-Partner-and-affliated-with-shree-lakshmi-narayan-college.png" alt="NCISM"></div>
                     <h4>National Council of Indian System of Medicine</h4>
-                    <a href="https://ncismindia.org/ayurveda.php?" target="_blank">ncismindia.org/ayurveda.php</a> <br><br>
+                    <a href="https://ncismindia.org/ayurveda.php?" target="_blank">ncismindia.org/ayurveda.php</a>
+                    <br><br>
                     <a class="btn btn-primary" href="https://ncismindia.org/ayurveda.php?" target="_blank">Visit
                         Website</a>
                 </div>
-                <div class="col-md-4 link-card">
-                    <img src="path/to/your/image2.jpg" alt="Deptt. of AYUSH">
-                    <h4>Deptt. of AYUSH</h4>
-                    <a href="http://ayush.gov.in/" target="_blank">ayush.gov.in</a> <br><br>
+                <div class="col-md-4 mb-4 link-card">
+                    <div><img src="../images/partners/Ministry-Of-Ayush-Partner-and-affliated-with-shree-lakshmi-narayan-college.png" alt="Deptt. of AYUSH"></div>
+                    <h4>Department of AYUSH</h4>
+                    <a href="http://ayush.gov.in/" target="_blank">ayush.gov.in</a>
+                    <br><br>
                     <a class="btn btn-primary" href="http://ayush.gov.in/" target="_blank">Visit Website</a>
                 </div>
-                <div class="col-md-4 link-card">
-                    <img src="path/to/your/image3.jpg" alt="Guru Ravidas Ayurved University">
+                <div class="col-md-4 mb-4 link-card">
+                    <div><img src="../images/partners/Guru-Ravidas-Ayurved-University-Hoshiarpur-Partner-and-affliated-with-shree-lakshmi-narayan-college.png" alt="Guru Ravidas Ayurved University"></div>
                     <h4>Guru Ravidas Ayurved University</h4>
-                    <a href="https://graupunjab.org/" target="_blank">graupunjab.org</a> <br><br>
+                    <a href="https://graupunjab.org/" target="_blank">graupunjab.org</a>
+                    <br><br>
                     <a class="btn btn-primary" href="https://graupunjab.org/" target="_blank">Visit Website</a>
                 </div>
             </div>
