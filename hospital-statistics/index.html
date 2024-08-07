@@ -237,112 +237,1715 @@
     <!--=================================
     Gallery -->
     <section class="space-ptb">
+        <style>
+            .management-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+                font-size: 18px;
+                text-align: left;
+            }
+
+            .management-table thead {
+                background-color: #a61d37;
+                color: white;
+            }
+
+            .management-table th,
+            .management-table td {
+                border: 1px solid #ddd;
+                padding: 12px 15px;
+            }
+
+            @media (max-width: 500px) {
+
+                .management-table th,
+                .management-table td {
+                    padding: 8px 10px;
+                    font-size: 14px;
+                }
+
+                .container-custom {
+                    padding: 0;
+                }
+            }
+
+            .management-table tbody tr:nth-of-type(even) {
+                background-color: #f3f3f3;
+            }
+
+            .management-table tbody tr:nth-of-type(odd) {
+                background-color: #ffffff;
+            }
+
+            .management-table tbody tr:hover {
+                background-color: #ddd;
+            }
+        </style>
         <div class="container">
-            <!-- <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10 text-center">
-                    <div class="section-title">
-                        <h2>Our Gallery</h2>
-                    </div>
-                </div>
-            </div> -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="filters-group mb-lg-4 text-center">
-                        <button class="btn-filter  active" data-group="all">All</button>
-                        <button class="btn-filter" data-group="awards">Awards</button>
-                        <button class="btn-filter" data-group="infrastructure">Infrastructure</button>
-                        <button class="btn-filter" data-group="campus">Campus Life</button>
-                        <button class="btn-filter" data-group="festivals">Festivals</button>
-                        <button class="btn-filter" data-group="clinical">Clinical Training</button>
-                        <button class="btn-filter" data-group="seminars">Seminars</button>
-                    </div>
-                    <div class="my-shuffle-container columns-3 popup-gallery full-screen">
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["branding"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/02.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/02.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
+            <h5 class="pt-3">Details No. of OPD (Out Patients Department) Patients in the calendar year (i.e 1st Jan
+                2024- 31st Dec
+                2024)</h5>
+            <table class="management-table">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Name of the Department</th>
+                        <th>JAN</th>
+                        <th>FEB</th>
+                        <th>MAR</th>
+                        <th>APR</th>
+                        <th>MAY</th>
+                        <th>JUN</th>
+                        <th>JUL</th>
+                        <th>AUG</th>
+                        <th>SEP</th>
+                        <th>OCT</th>
+                        <th>NOV</th>
+                        <th>DEC</th>
+                        <th>DEP. Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.</td>
+                        <td>Kayachikitsa (Rasayan & Manasroga etc.)</td>
+                        <td>536</td>
+                        <td>654</td>
+                        <td>693</td>
+                        <td>678</td>
+                        <td>703</td>
+                        <td>512</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Panchkarma</td>
+                        <td>220</td>
+                        <td>272</td>
+                        <td>305</td>
+                        <td>329</td>
+                        <td>356</td>
+                        <td>278</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>Shalya</td>
+                        <td>471</td>
+                        <td>430</td>
+                        <td>458</td>
+                        <td>529</td>
+                        <td>554</td>
+                        <td>516</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>Shalakya</td>
+                        <td>363</td>
+                        <td>356</td>
+                        <td>304</td>
+                        <td>307</td>
+                        <td>333</td>
+                        <td>302</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>Shalya Mukh, Nasa, Dant</td>
+                        <td>368</td>
+                        <td>373</td>
+                        <td>365</td>
+                        <td>354</td>
+                        <td>381</td>
+                        <td>341</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>6.</td>
+                        <td>Prasuti Tantra & Strirog</td>
+                        <td>547</td>
+                        <td>582</td>
+                        <td>599</td>
+                        <td>653</td>
+                        <td>661</td>
+                        <td>510</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>7.</td>
+                        <td>Kaumar Britya</td>
+                        <td>418</td>
+                        <td>431</td>
+                        <td>421</td>
+                        <td>428</td>
+                        <td>466</td>
+                        <td>402</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>8.</td>
+                        <td>Swasthavritta & Yoga</td>
+                        <td>145</td>
+                        <td>125</td>
+                        <td>141</td>
+                        <td>128</td>
+                        <td>135</td>
+                        <td>137</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>9.</td>
+                        <td>Aatyayik Chikitsa</td>
+                        <td>23</td>
+                        <td>14</td>
+                        <td>16</td>
+                        <td>11</td>
+                        <td>13</td>
+                        <td>7</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10.</td>
+                        <td>Agad Tantra</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>32</td>
+                        <td>124</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><strong>TOTAL</strong></td>
+                        <td><strong>3091</strong></td>
+                        <td><strong>3237</strong></td>
+                        <td><strong>3302</strong></td>
+                        <td><strong>3417</strong></td>
+                        <td><strong>3634</strong></td>
+                        <td><strong>3129</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
 
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["web", "photography", "branding"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/03.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/03.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
+            <h5 class="pt-3">No. of IPD (In Patients Department) Patients in the calendar year (i.e 1st Jan 2024- 31st
+                Dec 2024)</h5>
+            <table class="management-table">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Name of the Department</th>
+                        <th>JAN</th>
+                        <th>FEB</th>
+                        <th>MAR</th>
+                        <th>APR</th>
+                        <th>MAY</th>
+                        <th>JUN</th>
+                        <th>JUL</th>
+                        <th>AUG</th>
+                        <th>SEP</th>
+                        <th>OCT</th>
+                        <th>NOV</th>
+                        <th>DEC</th>
+                        <th>DEP. Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.</td>
+                        <td>Kayachikitsa</td>
+                        <td>26</td>
+                        <td>22</td>
+                        <td>33</td>
+                        <td>24</td>
+                        <td>24</td>
+                        <td>24</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Panchkarma</td>
+                        <td>10</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>26</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>Shalya</td>
+                        <td>25</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>28</td>
+                        <td>27</td>
+                        <td>29</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>Shalakya</td>
+                        <td>18</td>
+                        <td>16</td>
+                        <td>18</td>
+                        <td>17</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>Prasuti Tantra StriRog</td>
+                        <td>29</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>13</td>
+                        <td>18</td>
+                        <td>21</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>6.</td>
+                        <td>Kaumar Bhritya</td>
+                        <td>21</td>
+                        <td>23</td>
+                        <td>21</td>
+                        <td>16</td>
+                        <td>20</td>
+                        <td>18</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>7.</td>
+                        <td>Agad Tantra</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>2</td>
+                        <td>7</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><strong>TOTAL</strong></td>
+                        <td><strong>129</strong></td>
+                        <td><strong>111</strong></td>
+                        <td><strong>125</strong></td>
+                        <td><strong>108</strong></td>
+                        <td><strong>121</strong></td>
+                        <td><strong>145</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
 
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["photography"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/04.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/04.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
+            <h5 class="pt-3">Details of Total Beds Days Occupied in the calendar year (i.e 1st Jan 2024- 31st Dec 2024)
+            </h5>
+            <table class="management-table">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Name of the Department</th>
+                        <th>JAN</th>
+                        <th>FEB</th>
+                        <th>MAR</th>
+                        <th>APR</th>
+                        <th>MAY</th>
+                        <th>JUN</th>
+                        <th>JUL</th>
+                        <th>AUG</th>
+                        <th>SEP</th>
+                        <th>OCT</th>
+                        <th>NOV</th>
+                        <th>DEC</th>
+                        <th>DEP. Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.</td>
+                        <td>Kayachikitsa (Rasayan & Manasroga etc)</td>
+                        <td>271</td>
+                        <td>275</td>
+                        <td>266</td>
+                        <td>255</td>
+                        <td>294</td>
+                        <td>249</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Panchkarma</td>
+                        <td>107</td>
+                        <td>103</td>
+                        <td>106</td>
+                        <td>88</td>
+                        <td>118</td>
+                        <td>283</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>Shalya</td>
+                        <td>168</td>
+                        <td>164</td>
+                        <td>140</td>
+                        <td>170</td>
+                        <td>210</td>
+                        <td>216</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>Shalakya</td>
+                        <td>79</td>
+                        <td>70</td>
+                        <td>78</td>
+                        <td>65</td>
+                        <td>112</td>
+                        <td>103</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>Prasuti & Stri Rog</td>
+                        <td>219</td>
+                        <td>144</td>
+                        <td>157</td>
+                        <td>93</td>
+                        <td>109</td>
+                        <td>140</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>6.</td>
+                        <td>Kaumarbhritya</td>
+                        <td>101</td>
+                        <td>105</td>
+                        <td>98</td>
+                        <td>100</td>
+                        <td>85</td>
+                        <td>91</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>7.</td>
+                        <td>Agad Tantra</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>08</td>
+                        <td>61</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><strong>Total</strong></td>
+                        <td><strong>945</strong></td>
+                        <td><strong>861</strong></td>
+                        <td><strong>845</strong></td>
+                        <td><strong>771</strong></td>
+                        <td><strong>936</strong></td>
+                        <td><strong>1143</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
 
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["advertising"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/05.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/05.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
+            <h5 class="pt-3">Details of Total Beds Existed in the last calendar year (i.e 1st Jan 2023- 31st Dec 2023)
+            </h5>
+            <table class="management-table">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Name of the Department</th>
+                        <th>No of Existing beds for UG</th>
+                        <th>Additional Bed for existing PG (Clinical Dept) bed ration 1:4</th>
+                        <th>Total No of Available beds</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.</td>
+                        <td>Kayachikitsa (Panchkarma Rasayan & Manasroga etc)</td>
+                        <td>30</td>
+                        <td>0</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Shalya</td>
+                        <td>10</td>
+                        <td>0</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>Shalakya</td>
+                        <td>5</td>
+                        <td>0</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>Prasuti & Stri Roga</td>
+                        <td>10</td>
+                        <td>0</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>Kaumarbhritya (Bal Rog)</td>
+                        <td>5</td>
+                        <td>0</td>
+                        <td>5</td>
+                    </tr>
+                </tbody>
+            </table>
 
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["design", "advertising"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/06.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/06.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
+            <h5 class="pt-3">Details No. of OPD (Out Patients Department) Patients in the calendar year (i.e 1st Jan
+                2023- 31st Dec
+                2023)</h5>
+            <table class="management-table">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Name of the Department</th>
+                        <th>JAN</th>
+                        <th>FEB</th>
+                        <th>MAR</th>
+                        <th>APR</th>
+                        <th>MAY</th>
+                        <th>JUN</th>
+                        <th>JUL</th>
+                        <th>AUG</th>
+                        <th>SEP</th>
+                        <th>OCT</th>
+                        <th>NOV</th>
+                        <th>DEC</th>
+                        <th>DEP. Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.</td>
+                        <td>Kayachikitsa (Rasayan & Manasroga etc.)</td>
+                        <td>779</td>
+                        <td>769</td>
+                        <td>764</td>
+                        <td>802</td>
+                        <td>905</td>
+                        <td>819</td>
+                        <td>797</td>
+                        <td>723</td>
+                        <td>534</td>
+                        <td>584</td>
+                        <td>553</td>
+                        <td>588</td>
+                        <td>8617</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Panchkarma</td>
+                        <td>271</td>
+                        <td>306</td>
+                        <td>314</td>
+                        <td>333</td>
+                        <td>350</td>
+                        <td>335</td>
+                        <td>301</td>
+                        <td>359</td>
+                        <td>394</td>
+                        <td>293</td>
+                        <td>303</td>
+                        <td>298</td>
+                        <td>3857</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>Shalya</td>
+                        <td>426</td>
+                        <td>394</td>
+                        <td>432</td>
+                        <td>397</td>
+                        <td>435</td>
+                        <td>441</td>
+                        <td>432</td>
+                        <td>442</td>
+                        <td>480</td>
+                        <td>413</td>
+                        <td>452</td>
+                        <td>491</td>
+                        <td>5235</td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>Shalakya</td>
+                        <td>375</td>
+                        <td>324</td>
+                        <td>359</td>
+                        <td>332</td>
+                        <td>365</td>
+                        <td>346</td>
+                        <td>331</td>
+                        <td>367</td>
+                        <td>359</td>
+                        <td>348</td>
+                        <td>324</td>
+                        <td>328</td>
+                        <td>4137</td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>Shalya Mukh, Nasa, Dant</td>
+                        <td>419</td>
+                        <td>366</td>
+                        <td>387</td>
+                        <td>351</td>
+                        <td>386</td>
+                        <td>380</td>
+                        <td>372</td>
+                        <td>378</td>
+                        <td>375</td>
+                        <td>327</td>
+                        <td>345</td>
+                        <td>338</td>
+                        <td>4445</td>
+                    </tr>
+                    <tr>
+                        <td>6.</td>
+                        <td>Prasuti Tantra & Strirog</td>
+                        <td>582</td>
+                        <td>581</td>
+                        <td>606</td>
+                        <td>535</td>
+                        <td>614</td>
+                        <td>582</td>
+                        <td>557</td>
+                        <td>554</td>
+                        <td>568</td>
+                        <td>529</td>
+                        <td>538</td>
+                        <td>573</td>
+                        <td>6819</td>
+                    </tr>
+                    <tr>
+                        <td>7.</td>
+                        <td>Kaumar Britya</td>
+                        <td>407</td>
+                        <td>373</td>
+                        <td>392</td>
+                        <td>374</td>
+                        <td>413</td>
+                        <td>408</td>
+                        <td>405</td>
+                        <td>425</td>
+                        <td>419</td>
+                        <td>398</td>
+                        <td>427</td>
+                        <td>438</td>
+                        <td>4879</td>
+                    </tr>
+                    <tr>
+                        <td>8.</td>
+                        <td>Swasthavritta & Yoga</td>
+                        <td>97</td>
+                        <td>157</td>
+                        <td>189</td>
+                        <td>258</td>
+                        <td>261</td>
+                        <td>216</td>
+                        <td>285</td>
+                        <td>325</td>
+                        <td>289</td>
+                        <td>239</td>
+                        <td>145</td>
+                        <td>124</td>
+                        <td>2585</td>
+                    </tr>
+                    <tr>
+                        <td>9.</td>
+                        <td>Aatyayik Chikitsa</td>
+                        <td>23</td>
+                        <td>18</td>
+                        <td>17</td>
+                        <td>11</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>4</td>
+                        <td>11</td>
+                        <td>9</td>
+                        <td>11</td>
+                        <td>156</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><strong>TOTAL</strong></td>
+                        <td><strong>3379</strong></td>
+                        <td><strong>3288</strong></td>
+                        <td><strong>3460</strong></td>
+                        <td><strong>3393</strong></td>
+                        <td><strong>3744</strong></td>
+                        <td><strong>3543</strong></td>
+                        <td><strong>3490</strong></td>
+                        <td><strong>3584</strong></td>
+                        <td><strong>3422</strong></td>
+                        <td><strong>3142</strong></td>
+                        <td><strong>3096</strong></td>
+                        <td><strong>3189</strong></td>
+                        <td><strong>40730</strong></td>
+                    </tr>
+                </tbody>
+            </table>
 
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["branding", "web"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/01.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/01.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
-                    </div>
-                </div>
-            </div>
+            <h5 class="pt-3">No. of IPD (In Patients Department) Patients in the calendar year (i.e 1st Jan 2023- 31st
+                Dec 2023)</h5>
+            <table class="management-table">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Name of the Department</th>
+                        <th>JAN</th>
+                        <th>FEB</th>
+                        <th>MAR</th>
+                        <th>APR</th>
+                        <th>MAY</th>
+                        <th>JUN</th>
+                        <th>JUL</th>
+                        <th>AUG</th>
+                        <th>SEP</th>
+                        <th>OCT</th>
+                        <th>NOV</th>
+                        <th>DEC</th>
+                        <th>DEP. Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Kayachikitsa</td>
+                        <td>38</td>
+                        <td>41</td>
+                        <td>44</td>
+                        <td>43</td>
+                        <td>52</td>
+                        <td>44</td>
+                        <td>40</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>34</td>
+                        <td>19</td>
+                        <td>18</td>
+                        <td>413</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Panchkarma</td>
+                        <td>13</td>
+                        <td>11</td>
+                        <td>08</td>
+                        <td>06</td>
+                        <td>16</td>
+                        <td>04</td>
+                        <td>07</td>
+                        <td>09</td>
+                        <td>04</td>
+                        <td>05</td>
+                        <td>06</td>
+                        <td>09</td>
+                        <td>98</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Shalya</td>
+                        <td>28</td>
+                        <td>19</td>
+                        <td>26</td>
+                        <td>23</td>
+                        <td>29</td>
+                        <td>20</td>
+                        <td>19</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>18</td>
+                        <td>15</td>
+                        <td>21</td>
+                        <td>261</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Shalakya</td>
+                        <td>21</td>
+                        <td>16</td>
+                        <td>19</td>
+                        <td>18</td>
+                        <td>18</td>
+                        <td>18</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>18</td>
+                        <td>18</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>212</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Prasuti Tantra StriRog</td>
+                        <td>39</td>
+                        <td>34</td>
+                        <td>34</td>
+                        <td>27</td>
+                        <td>29</td>
+                        <td>26</td>
+                        <td>17</td>
+                        <td>19</td>
+                        <td>16</td>
+                        <td>16</td>
+                        <td>16</td>
+                        <td>24</td>
+                        <td>306</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Kaumar Bhritya</td>
+                        <td>24</td>
+                        <td>23</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>21</td>
+                        <td>25</td>
+                        <td>23</td>
+                        <td>23</td>
+                        <td>23</td>
+                        <td>20</td>
+                        <td>22</td>
+                        <td>271</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><strong>TOTAL</strong></td>
+                        <td><strong>163</strong></td>
+                        <td><strong>144</strong></td>
+                        <td><strong>153</strong></td>
+                        <td><strong>140</strong></td>
+                        <td><strong>168</strong></td>
+                        <td><strong>33</strong></td>
+                        <td><strong>123</strong></td>
+                        <td><strong>108</strong></td>
+                        <td><strong>134</strong></td>
+                        <td><strong>134</strong></td>
+                        <td><strong>92</strong></td>
+                        <td><strong>112</strong></td>
+                        <td><strong>1561</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h5 class="pt-3">Details of Total Beds Days Occupied in the calendar year (i.e 1st Jan 2023- 31st Dec 2023)
+            </h5>
+            <table class="management-table">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Name of the Department</th>
+                        <th>JAN</th>
+                        <th>FEB</th>
+                        <th>MAR</th>
+                        <th>APR</th>
+                        <th>MAY</th>
+                        <th>JUN</th>
+                        <th>JUL</th>
+                        <th>AUG</th>
+                        <th>SEP</th>
+                        <th>OCT</th>
+                        <th>NOV</th>
+                        <th>DEC</th>
+                        <th>DEP. Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.</td>
+                        <td>Kayachikitsa (Rasayan & Manasroga etc)</td>
+                        <td>476</td>
+                        <td>459</td>
+                        <td>471</td>
+                        <td>419</td>
+                        <td>340</td>
+                        <td>376</td>
+                        <td>305</td>
+                        <td>267</td>
+                        <td>314</td>
+                        <td>332</td>
+                        <td>277</td>
+                        <td>291</td>
+                        <td>4327</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Panchkarma</td>
+                        <td>99</td>
+                        <td>130</td>
+                        <td>121</td>
+                        <td>108</td>
+                        <td>96</td>
+                        <td>67</td>
+                        <td>62</td>
+                        <td>79</td>
+                        <td>4</td>
+                        <td>73</td>
+                        <td>68</td>
+                        <td>109</td>
+                        <td>1081</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>Shalya</td>
+                        <td>163</td>
+                        <td>115</td>
+                        <td>174</td>
+                        <td>154</td>
+                        <td>117</td>
+                        <td>158</td>
+                        <td>146</td>
+                        <td>159</td>
+                        <td>165</td>
+                        <td>165</td>
+                        <td>144</td>
+                        <td>166</td>
+                        <td>1826</td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>Shalakya</td>
+                        <td>418</td>
+                        <td>97</td>
+                        <td>109</td>
+                        <td>95</td>
+                        <td>79</td>
+                        <td>77</td>
+                        <td>67</td>
+                        <td>80</td>
+                        <td>78</td>
+                        <td>94</td>
+                        <td>77</td>
+                        <td>81</td>
+                        <td>1352</td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>Prasuti & Stri Rog</td>
+                        <td>312</td>
+                        <td>261</td>
+                        <td>156</td>
+                        <td>188</td>
+                        <td>169</td>
+                        <td>155</td>
+                        <td>107</td>
+                        <td>147</td>
+                        <td>184</td>
+                        <td>111</td>
+                        <td>104</td>
+                        <td>153</td>
+                        <td>2109</td>
+                    </tr>
+                    <tr>
+                        <td>6.</td>
+                        <td>Kaumarbhritya</td>
+                        <td>120</td>
+                        <td>104</td>
+                        <td>99</td>
+                        <td>112</td>
+                        <td>85</td>
+                        <td>109</td>
+                        <td>92</td>
+                        <td>92</td>
+                        <td>99</td>
+                        <td>110</td>
+                        <td>63</td>
+                        <td>96</td>
+                        <td>1209</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><strong>Total</strong></td>
+                        <td><strong>1588</strong></td>
+                        <td><strong>1166</strong></td>
+                        <td><strong>1130</strong></td>
+                        <td><strong>1076</strong></td>
+                        <td><strong>886</strong></td>
+                        <td><strong>942</strong></td>
+                        <td><strong>779</strong></td>
+                        <td><strong>824</strong></td>
+                        <td><strong>844</strong></td>
+                        <td><strong>885</strong></td>
+                        <td><strong>733</strong></td>
+                        <td><strong>896</strong></td>
+                        <td><strong>11904</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h5 class="pt-3">Details of Total Beds Existed in the last calendar year (i.e 1st Jan 2023- 31st Dec 2023)
+            </h5>
+            <table class="management-table">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Name of the Department</th>
+                        <th>No of Existing beds for UG</th>
+                        <th>Additional Bed for existing PG (Clinical Dept) bed ration 1:4</th>
+                        <th>Total No of Available beds</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.</td>
+                        <td>Kayachikitsa (Panchkarma Rasayan & Manasroga etc)</td>
+                        <td>30</td>
+                        <td>0</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Shalya</td>
+                        <td>10</td>
+                        <td>0</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>Shalakya</td>
+                        <td>5</td>
+                        <td>0</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>Prasuti & Stri Roga</td>
+                        <td>10</td>
+                        <td>0</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>Kaumarbhritya (Bal Rog)</td>
+                        <td>5</td>
+                        <td>0</td>
+                        <td>5</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h5 class="pt-3">No. of OPD (Out Patients Department) Patients in the calendar year (i.e 1st Jan 2022- 31st
+                Dec 2022)
+            </h5>
+            <table class="management-table">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Name of the Department</th>
+                        <th>JAN</th>
+                        <th>FEB</th>
+                        <th>MAR</th>
+                        <th>APR</th>
+                        <th>MAY</th>
+                        <th>JUN</th>
+                        <th>JUL</th>
+                        <th>AUG</th>
+                        <th>SEP</th>
+                        <th>OCT</th>
+                        <th>NOV</th>
+                        <th>DEC</th>
+                        <th>DEP. Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Kayachikitsa (Rasayan & Manasroga etc.)</td>
+                        <td>611</td>
+                        <td>645</td>
+                        <td>763</td>
+                        <td>759</td>
+                        <td>821</td>
+                        <td>762</td>
+                        <td>835</td>
+                        <td>830</td>
+                        <td>839</td>
+                        <td>791</td>
+                        <td>834</td>
+                        <td>933</td>
+                        <td>9423</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Panchkarma</td>
+                        <td>177</td>
+                        <td>280</td>
+                        <td>364</td>
+                        <td>373</td>
+                        <td>349</td>
+                        <td>320</td>
+                        <td>302</td>
+                        <td>396</td>
+                        <td>359</td>
+                        <td>257</td>
+                        <td>293</td>
+                        <td>314</td>
+                        <td>3794</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Shalya</td>
+                        <td>447</td>
+                        <td>468</td>
+                        <td>445</td>
+                        <td>408</td>
+                        <td>435</td>
+                        <td>442</td>
+                        <td>417</td>
+                        <td>429</td>
+                        <td>427</td>
+                        <td>397</td>
+                        <td>411</td>
+                        <td>442</td>
+                        <td>5168</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Shalakya</td>
+                        <td>352</td>
+                        <td>370</td>
+                        <td>365</td>
+                        <td>362</td>
+                        <td>370</td>
+                        <td>375</td>
+                        <td>369</td>
+                        <td>373</td>
+                        <td>377</td>
+                        <td>345</td>
+                        <td>371</td>
+                        <td>391</td>
+                        <td>4420</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Shalya Mukh, Nasa & Dant</td>
+                        <td>410</td>
+                        <td>415</td>
+                        <td>409</td>
+                        <td>393</td>
+                        <td>409</td>
+                        <td>410</td>
+                        <td>419</td>
+                        <td>424</td>
+                        <td>424</td>
+                        <td>387</td>
+                        <td>415</td>
+                        <td>449</td>
+                        <td>4964</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Prasuti Tantra & Stri Rog</td>
+                        <td>585</td>
+                        <td>613</td>
+                        <td>575</td>
+                        <td>571</td>
+                        <td>607</td>
+                        <td>593</td>
+                        <td>631</td>
+                        <td>632</td>
+                        <td>630</td>
+                        <td>537</td>
+                        <td>566</td>
+                        <td>637</td>
+                        <td>7177</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Kaumarbhritya</td>
+                        <td>372</td>
+                        <td>423</td>
+                        <td>424</td>
+                        <td>422</td>
+                        <td>440</td>
+                        <td>419</td>
+                        <td>425</td>
+                        <td>426</td>
+                        <td>405</td>
+                        <td>372</td>
+                        <td>407</td>
+                        <td>420</td>
+                        <td>4955</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Swasthavritta & Yoga</td>
+                        <td>67</td>
+                        <td>70</td>
+                        <td>71</td>
+                        <td>83</td>
+                        <td>83</td>
+                        <td>80</td>
+                        <td>86</td>
+                        <td>80</td>
+                        <td>91</td>
+                        <td>71</td>
+                        <td>76</td>
+                        <td>72</td>
+                        <td>930</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Aatyayik Chikitsa</td>
+                        <td>25</td>
+                        <td>19</td>
+                        <td>29</td>
+                        <td>20</td>
+                        <td>22</td>
+                        <td>19</td>
+                        <td>09</td>
+                        <td>18</td>
+                        <td>13</td>
+                        <td>26</td>
+                        <td>26</td>
+                        <td>24</td>
+                        <td>250</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><strong>Total</strong></td>
+                        <td><strong>3046</strong></td>
+                        <td><strong>3303</strong></td>
+                        <td><strong>3455</strong></td>
+                        <td><strong>3391</strong></td>
+                        <td><strong>3536</strong></td>
+                        <td><strong>3420</strong></td>
+                        <td><strong>3493</strong></td>
+                        <td><strong>3608</strong></td>
+                        <td><strong>3565</strong></td>
+                        <td><strong>3183</strong></td>
+                        <td><strong>3399</strong></td>
+                        <td><strong>3682</strong></td>
+                        <td><strong>41081</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h5 class="pt-3">No. of IPD (In Patients Department) Patients in the calendar year (i.e 1st Jan 2022- 31st
+                Dec 2022)</h5>
+            <table class="management-table">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Name of the Department</th>
+                        <th>JAN</th>
+                        <th>FEB</th>
+                        <th>MAR</th>
+                        <th>APR</th>
+                        <th>MAY</th>
+                        <th>JUN</th>
+                        <th>JUL</th>
+                        <th>AUG</th>
+                        <th>SEP</th>
+                        <th>OCT</th>
+                        <th>NOV</th>
+                        <th>DEC</th>
+                        <th>DEP. Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Kayachikitsa</td>
+                        <td>24</td>
+                        <td>34</td>
+                        <td>50</td>
+                        <td>48</td>
+                        <td>43</td>
+                        <td>48</td>
+                        <td>57</td>
+                        <td>30</td>
+                        <td>38</td>
+                        <td>39</td>
+                        <td>41</td>
+                        <td>51</td>
+                        <td>503</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Panchkarma</td>
+                        <td>05</td>
+                        <td>13</td>
+                        <td>17</td>
+                        <td>12</td>
+                        <td>09</td>
+                        <td>12</td>
+                        <td>10</td>
+                        <td>08</td>
+                        <td>07</td>
+                        <td>06</td>
+                        <td>06</td>
+                        <td>06</td>
+                        <td>111</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Shalya</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>31</td>
+                        <td>28</td>
+                        <td>25</td>
+                        <td>25</td>
+                        <td>23</td>
+                        <td>21</td>
+                        <td>20</td>
+                        <td>24</td>
+                        <td>34</td>
+                        <td>28</td>
+                        <td>310</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Shalakya</td>
+                        <td>16</td>
+                        <td>16</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>17</td>
+                        <td>16</td>
+                        <td>14</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>19</td>
+                        <td>24</td>
+                        <td>23</td>
+                        <td>205</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Prasuti & Stri Rog</td>
+                        <td>36</td>
+                        <td>41</td>
+                        <td>46</td>
+                        <td>43</td>
+                        <td>39</td>
+                        <td>40</td>
+                        <td>41</td>
+                        <td>38</td>
+                        <td>30</td>
+                        <td>29</td>
+                        <td>35</td>
+                        <td>34</td>
+                        <td>452</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Kaumarbhritya</td>
+                        <td>18</td>
+                        <td>22</td>
+                        <td>25</td>
+                        <td>25</td>
+                        <td>27</td>
+                        <td>24</td>
+                        <td>23</td>
+                        <td>23</td>
+                        <td>14</td>
+                        <td>12</td>
+                        <td>28</td>
+                        <td>23</td>
+                        <td>264</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><strong>Total</strong></td>
+                        <td>124</td>
+                        <td>152</td>
+                        <td>185</td>
+                        <td>173</td>
+                        <td>160</td>
+                        <td>165</td>
+                        <td>168</td>
+                        <td>133</td>
+                        <td>123</td>
+                        <td>129</td>
+                        <td>168</td>
+                        <td>165</td>
+                        <td><strong>1845</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h5 class="pt-3">Details of Total Beds Days Occupied in the calendar year (i.e 1st Jan 2022- 31st Dec 2022)
+            </h5>
+            <table class="management-table">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Name of the Department</th>
+                        <th>JAN</th>
+                        <th>FEB</th>
+                        <th>MAR</th>
+                        <th>APR</th>
+                        <th>MAY</th>
+                        <th>JUN</th>
+                        <th>JUL</th>
+                        <th>AUG</th>
+                        <th>SEP</th>
+                        <th>OCT</th>
+                        <th>NOV</th>
+                        <th>DEC</th>
+                        <th>DEP. Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Kayachikitsa (Rasayan & Manasroga etc)</td>
+                        <td>255</td>
+                        <td>405</td>
+                        <td>546</td>
+                        <td>586</td>
+                        <td>668</td>
+                        <td>570</td>
+                        <td>501</td>
+                        <td>424</td>
+                        <td>512</td>
+                        <td>436</td>
+                        <td>526</td>
+                        <td>543</td>
+                        <td>5986</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Panchkarma</td>
+                        <td>73</td>
+                        <td>140</td>
+                        <td>155</td>
+                        <td>145</td>
+                        <td>92</td>
+                        <td>90</td>
+                        <td>85</td>
+                        <td>76</td>
+                        <td>77</td>
+                        <td>68</td>
+                        <td>78</td>
+                        <td>96</td>
+                        <td>1175</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Shalya</td>
+                        <td>130</td>
+                        <td>148</td>
+                        <td>139</td>
+                        <td>136</td>
+                        <td>155</td>
+                        <td>156</td>
+                        <td>130</td>
+                        <td>27</td>
+                        <td>92</td>
+                        <td>130</td>
+                        <td>185</td>
+                        <td>127</td>
+                        <td>1539</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Shalakya</td>
+                        <td>75</td>
+                        <td>61</td>
+                        <td>67</td>
+                        <td>97</td>
+                        <td>75</td>
+                        <td>68</td>
+                        <td>74</td>
+                        <td>68</td>
+                        <td>77</td>
+                        <td>136</td>
+                        <td>161</td>
+                        <td>162</td>
+                        <td>1093</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Prasuti & Stri Rog</td>
+                        <td>325</td>
+                        <td>376</td>
+                        <td>351</td>
+                        <td>328</td>
+                        <td>283</td>
+                        <td>390</td>
+                        <td>303</td>
+                        <td>292</td>
+                        <td>236</td>
+                        <td>230</td>
+                        <td>242</td>
+                        <td>286</td>
+                        <td>3633</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Kaumarbhritya</td>
+                        <td>120</td>
+                        <td>135</td>
+                        <td>118</td>
+                        <td>119</td>
+                        <td>150</td>
+                        <td>128</td>
+                        <td>110</td>
+                        <td>121</td>
+                        <td>80</td>
+                        <td>85</td>
+                        <td>118</td>
+                        <td>103</td>
+                        <td>1387</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><strong>Total</strong></td>
+                        <td>976</td>
+                        <td>1256</td>
+                        <td>1376</td>
+                        <td>1411</td>
+                        <td>1423</td>
+                        <td>1402</td>
+                        <td>1203</td>
+                        <td>1008</td>
+                        <td>1074</td>
+                        <td>1085</td>
+                        <td>1310</td>
+                        <td>1317</td>
+                        <td>14813</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h5 class="pt-3">Details of Total Beds Existed in the calendar year (i.e 1st Jan 2022- 31st Dec 2022)</h5>
+            <table class="management-table">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Name of the Department</th>
+                        <th>No of Existing Beds for UG</th>
+                        <th>Additional Bed for Existing PG (Clinical Dept) bed ratio 1:4</th>
+                        <th>Total No of Available Beds</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Kayachikitsa (Panchkarma Rasayan & Manasroga etc)</td>
+                        <td>30</td>
+                        <td>0</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Shalya</td>
+                        <td>10</td>
+                        <td>0</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Shalakya</td>
+                        <td>5</td>
+                        <td>0</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Prasuti & Stri Roga</td>
+                        <td>10</td>
+                        <td>0</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Kaumarbhritya (Bal Rog)</td>
+                        <td>5</td>
+                        <td>0</td>
+                        <td>5</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
     <!--=================================
