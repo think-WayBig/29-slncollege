@@ -267,7 +267,8 @@ app.post('/sendUserMail', async (req, res) => {
   try {
     await sendGridMail.send(msg);
     res.json({
-      message: "Email sent Successfully!!"
+      message: "Email sent Successfully!!",
+      success: true
     });
   } catch (error) {
     res.json({
@@ -401,7 +402,7 @@ app.post('/contactForm', async (req, res) => {
 
   try {
     await sendGridMail.send(msg);
-    res.json({ message: "Email sent Successfully!!" });
+    res.json({ message: "Email sent Successfully!!", success: true });
   } catch (error) {
     res.json({ message: "Error", error: error });
   }
