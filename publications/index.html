@@ -236,110 +236,200 @@
 
     <!--=================================
     Gallery -->
+
+    <style>
+        .management-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+
+        .management-table thead {
+            background-color: #a61d37;
+            color: white;
+        }
+
+        .management-table th,
+        .management-table td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+        }
+
+        @media (max-width: 500px) {
+
+            .management-table th,
+            .management-table td {
+                padding: 8px 10px;
+                font-size: 14px;
+            }
+
+            .container-custom {
+                padding: 0;
+            }
+        }
+
+        .management-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        .management-table tbody tr:nth-of-type(odd) {
+            background-color: #ffffff;
+        }
+
+        .management-table tbody tr:hover {
+            background-color: #ddd;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+    </style>
+
     <section class="space-ptb">
         <div class="container">
-            <!-- <div class="row justify-content-center">
+            <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10 text-center">
                     <div class="section-title">
-                        <h2>Our Gallery</h2>
+                        <h2>RESEARCH PAPERS</h2>
                     </div>
                 </div>
-            </div> -->
+            </div>
             <div class="row">
                 <div class="col-md-12">
-                    <div class="filters-group mb-lg-4 text-center">
-                        <button class="btn-filter  active" data-group="all">All</button>
-                        <button class="btn-filter" data-group="awards">Awards</button>
-                        <button class="btn-filter" data-group="infrastructure">Infrastructure</button>
-                        <button class="btn-filter" data-group="campus">Campus Life</button>
-                        <button class="btn-filter" data-group="festivals">Festivals</button>
-                        <button class="btn-filter" data-group="clinical">Clinical Training</button>
-                        <button class="btn-filter" data-group="seminars">Seminars</button>
+                    <h4>Dr.Minaxi Arora</h4>
+                    <p class="mb-0">Prof.and H.O.D.</p>
+                    <p class="mb-0">Department Dravyaguna</p>
+                    <div class="table-container">
+                        <table class="management-table">
+                            <thead>
+                                <tr>
+                                    <th>S.no.</th>
+                                    <th>Name of Journal</th>
+                                    <th>Title of Publication</th>
+                                    <th>Authorship</th>
+                                    <th>N/IN</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1.</td>
+                                    <td>Earthgenerals-Critical review in Dravyagunshastra</td>
+                                    <td>Perspectives of Dravyagunshastra</td>
+                                    <td>Author</td>
+                                    <td>ISSN 2319-1082</td>
+                                </tr>
+                                <tr>
+                                    <td>2.</td>
+                                    <td>World Journal of Pharmacy And Pharmaceutical Sciences</td>
+                                    <td>Comparitive Study of Aloevera and Abroma augusta w.s.r. to Dysmenorrhea</td>
+                                    <td>Author</td>
+                                    <td>ISSN 2278-4357</td>
+                                </tr>
+                                <tr>
+                                    <td>3.</td>
+                                    <td>World Journal of Pharmacy And Pharmaceutical Sciences</td>
+                                    <td>Ethnobotanical Studies of Amritsar (Punjab)</td>
+                                    <td>Author</td>
+                                    <td>ISSN 2278-4357</td>
+                                </tr>
+                                <tr>
+                                    <td>4.</td>
+                                    <td>Asian Journal of Pharmacy</td>
+                                    <td>Modified Natural Gums</td>
+                                    <td>Author</td>
+                                    <td>ISSN 0970-7877</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="my-shuffle-container columns-3 popup-gallery full-screen">
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["branding"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/02.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/02.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
 
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["web", "photography", "branding"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/03.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/03.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
+                    <h4 class="mt-5">Dr.Veenu Malhotra</h4>
+                    <p class="mb-0">Professor</p>
+                    <div class="table-container">
+                        <table class="management-table">
+                            <thead>
+                                <tr>
+                                    <th>S.no.</th>
+                                    <th>Name of Journal</th>
+                                    <th>Title of Publication</th>
+                                    <th>Authorship</th>
+                                    <th>N/IN</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1.</td>
+                                    <td>World Journal of Pharmaceutical Research</td>
+                                    <td>Management of Indralupta in Ayurveda</td>
+                                    <td>Author</td>
+                                    <td>ISSN 2277-7105</td>
+                                </tr>
+                                <tr class="multi-row">
+                                    <td></td>
+                                    <td></td>
+                                    <td>Dr. Radhika Sharma</td>
+                                    <td>Lecturer</td>
+                                    <td>Deptt. Panchkarma</td>
+                                </tr>
+                                <tr>
+                                    <td>2.</td>
+                                    <td>AYUSHDARPAN</td>
+                                    <td>Importance of Netratarpan in Eye Disorders</td>
+                                    <td>Author</td>
+                                    <td>ISSN 0976-3368</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
 
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["photography"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/04.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/04.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
+            <div class="row justify-content-center mt-5 mb-0">
+                <div class="col-lg-8 col-md-10 text-center">
+                    <div class="section-title">
+                        <h2>BOOKS</h2>
+                    </div>
+                </div>
+            </div>
 
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["advertising"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/05.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/05.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
-
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["design", "advertising"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/06.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/06.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
-
-                        <!-- item START -->
-                        <div class="grid-item" data-groups='["branding", "web"]'>
-                            <div class="portfolio-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid" src="images/gallery/01.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                        <a class="portfolio-img" href="images/gallery/01.jpg"><i
-                                                class="fas fa-arrows-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item End -->
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Dr.Veenu Malhotra</h4>
+                    <p class="mb-0">Dr.Reema Khurana</p>
+                    <p class="mb-0">Department RasShastra</p>
+                    <div class="table-container">
+                        <table class="management-table">
+                            <thead>
+                                <tr>
+                                    <th>S.No.</th>
+                                    <th>Name of Publisher</th>
+                                    <th>Title of Book</th>
+                                    <th>Authorship</th>
+                                    <th>ISBN</th>
+                                    <th>Edition</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1.</td>
+                                    <td>Chaukhambha Orientlia, Varanasi</td>
+                                    <td>RasShastra Samhita Sangrah</td>
+                                    <td>Author</td>
+                                    <td>978-81-313-5</td>
+                                    <td>FIRST</td>
+                                </tr>
+                                <tr>
+                                    <td>2.</td>
+                                    <td>Chaukhambha Surbharti Prakashan, Varanasi</td>
+                                    <td>Ayurvediya Samhita Sangrah</td>
+                                    <td>Author</td>
+                                    <td>978-93-86554-87-1</td>
+                                    <td>FIRST</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
