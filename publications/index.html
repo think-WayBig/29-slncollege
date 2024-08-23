@@ -1071,7 +1071,7 @@
 
     <!-- Back to Top -->
     <a target="_blank"
-        href="https://api.whatsapp.com/send?phone=916239764894&text=Hi!%20I%20have%20a%20query%20regarding%20the%20college"
+        href="https://api.whatsapp.com/send?phone=916239764882&text=Hi!%20I%20have%20a%20query%20regarding%20the%20college"
         class="whatsapp-icon">
         <img src="../images/whatsapp-slnay-college-amritsar.png" alt="aleco-whatsapp" />
     </a>
@@ -1083,7 +1083,7 @@
         </i>
         <p>Let's chat about your career!</p>
         <a target="_blank"
-            href="https://api.whatsapp.com/send?phone=916239764894&text=Hi!%20I%20have%20a%20query%20regarding%20the%20college">
+            href="https://api.whatsapp.com/send?phone=916239764882&text=Hi!%20I%20have%20a%20query%20regarding%20the%20college">
             Chat Now
         </a>
     </div>
@@ -1150,8 +1150,8 @@
             }
 
             try {
-                await postData('http://localhost:5000/newsletter/', { mail });
-                await postData('http://localhost:5000/sendUserMail', { mail });
+                await postData('https://29-slncollege-api.vercel.app/newsletter/', { mail });
+                await postData('https://29-slncollege-api.vercel.app/sendUserMail', { mail });
 
                 toast('You are subscribed!');
             } catch (error) {

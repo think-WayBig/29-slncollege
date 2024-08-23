@@ -686,7 +686,8 @@
               title="Shree Lakshmi Narayan Ayurvedic College & Hospital Logo"></a>
           <p class="text-white">
             Shree Lakshmi Narayan Ayurvedic College & Hospital, Amritsar, established in 1972, offers B.A.M.S. and is
-            affiliated with Guru Ravidas Ayurved University, Hoshiarpur Punjab. Led by Principal Dr. Minaxi Arora, it is recognized by the
+            affiliated with Guru Ravidas Ayurved University, Hoshiarpur Punjab. Led by Principal Dr. Minaxi Arora, it is
+            recognized by the
             National Commission of Indian System of Medicine.</p>
           <h5 class="text-white mb-3 mb-sm-4">Follow Us</h5>
           <div class="social-icon social-icon-style-02">
@@ -873,7 +874,7 @@
 
   <!-- Back to Top -->
   <a target="_blank"
-    href="https://api.whatsapp.com/send?phone=916239764894&text=Hi!%20I%20have%20a%20query%20regarding%20the%20college"
+    href="https://api.whatsapp.com/send?phone=916239764882&text=Hi!%20I%20have%20a%20query%20regarding%20the%20college"
     class="whatsapp-icon">
     <img src="../images/whatsapp-slnay-college-amritsar.png" alt="aleco-whatsapp" />
   </a>
@@ -884,7 +885,7 @@
     </i>
     <p>Let's chat about your career!</p>
     <a target="_blank"
-      href="https://api.whatsapp.com/send?phone=916239764894&text=Hi!%20I%20have%20a%20query%20regarding%20the%20college">
+      href="https://api.whatsapp.com/send?phone=916239764882&text=Hi!%20I%20have%20a%20query%20regarding%20the%20college">
       Chat Now
     </a>
   </div>
@@ -951,8 +952,8 @@
       }
 
       try {
-        await postData('http://localhost:5000/newsletter/', { mail });
-        await postData('http://localhost:5000/sendUserMail', { mail });
+        await postData('https://29-slncollege-api.vercel.app/newsletter/', { mail });
+        await postData('https://29-slncollege-api.vercel.app/sendUserMail', { mail });
 
         toast('You are subscribed!');
       } catch (error) {
@@ -998,7 +999,7 @@
         };
 
         try {
-          const response = await fetch('http://localhost:5000/contactForm/', {
+          const response = await fetch('https://29-slncollege-api.vercel.app/contactForm/', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -1014,7 +1015,7 @@
         }
 
         try {
-          fetch('http://localhost:5000/sendUserMail', {
+          fetch('https://29-slncollege-api.vercel.app/sendUserMail', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
