@@ -635,6 +635,35 @@
             object-fit: cover;
             /* Ensures the image covers the entire div while maintaining aspect ratio */
         }
+
+        .filters-group {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding-bottom: 10px;
+            /* Optional: to make space for the scrollbar */
+            -webkit-overflow-scrolling: touch;
+            /* Ensures smooth scrolling on touch devices */
+        }
+
+        .filters-group::-webkit-scrollbar {
+            height: 8px;
+            /* Height of the scrollbar */
+        }
+
+        .filters-group::-webkit-scrollbar-thumb {
+            background-color: #ccc;
+            /* Scrollbar color */
+            border-radius: 10px;
+            /* Rounded corners for the scrollbar */
+        }
+
+        .btn-filter {
+            flex-shrink: 0;
+            /* Prevent buttons from shrinking */
+            margin-right: 10px;
+            /* Optional: add space between buttons */
+        }
     </style>
 
     <section class="space-pt">
