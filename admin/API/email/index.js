@@ -408,6 +408,78 @@ app.post('/contactForm', async (req, res) => {
   }
 });
 
+app.post('/bookAppointment', async (req, res) => {
+  let { department, doctor, day, message } = req.body;
+
+  // Table styles for the email
+  const tableStyles = `
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        font-family: Arial, sans-serif;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+      }
+      th, td {
+        padding: 15px;
+        text-align: left;
+        border: 1px solid #ddd;
+        font-size: 15px;
+      }
+      th {
+        background-color: #1a5276;
+        color: #fff;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      tr:hover {
+        background-color: #e9e9e9;
+      }
+    </style>
+  `;
+
+  // Table data with form information
+  const tableData = `
+    <table>
+      <tr>
+        <th>Department</th>
+        <td>${department}</td>
+      </tr>
+      <tr>
+        <th>Doctor</th>
+        <td>${doctor}</td>
+      </tr>
+      <tr>
+        <th>Preferred Day</th>
+        <td>${day}</td>
+      </tr>
+      <tr>
+        <th>Message for the Doctor</th>
+        <td>${message}</td>
+      </tr>
+    </table>
+  `;
+
+  // Configuring the email to be sent
+  const msg = {
+    to: ['rspmanas1@gmail.com'], // Replace with the doctor's or administrator's email address
+    from: { name: 'Clinic Appointment', email: 'rkinfotechasr@gmail.com' }, // Replace with your clinic's email
+    subject: `New Appointment Request from ${req.body.department} Department`,
+    html: `${tableStyles}${tableData}`
+  };
+
+  // Sending the email and handling the response
+  try {
+    await sendGridMail.send(msg);
+    res.json({ message: "Appointment request sent successfully!", success: true });
+  } catch (error) {
+    console.error("Error sending email:", error);
+    res.json({ message: "Error sending appointment request", error: error.message });
+  }
+});
+
 app.post('/contactNormal', async (req, res) => {
   let { name, mail, message } = req.body;
 
