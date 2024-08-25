@@ -394,7 +394,7 @@ app.post('/contactForm', async (req, res) => {
   `;
 
   const msg = {
-    to: ['rspmanas1@gmail.com'],
+    to: ['cyberbuddy02@gmail.com', 'slnaycollege@gmail.com'],
     from: { name: 'Manas Gupta', email: 'rkinfotechasr@gmail.com' },
     subject: `New Enquiry: ${req.body.name}`,
     html: `${tableStyles}${tableData}`
@@ -464,7 +464,7 @@ app.post('/bookAppointment', async (req, res) => {
 
   // Configuring the email to be sent
   const msg = {
-    to: ['rspmanas1@gmail.com'], // Replace with the doctor's or administrator's email address
+    to: ['cyberbuddy02@gmail.com', 'slnaycollege@gmail.com'], // Replace with the doctor's or administrator's email address
     from: { name: 'Clinic Appointment', email: 'rkinfotechasr@gmail.com' }, // Replace with your clinic's email
     subject: `New Appointment Request from ${req.body.department} Department`,
     html: `${tableStyles}${tableData}`
@@ -584,7 +584,7 @@ app.post('/newsletter', async (req, res) => {
   `;
 
   const msg = {
-    to: ['rspmanas1@gmail.com'],
+    to: ['cyberbuddy02@gmail.com', 'slnaycollege@gmail.com'],
     from: { name: 'Manas Gupta', email: 'rkinfotechasr@gmail.com' },
     subject: `New member for Newsletter`,
     html: `${tableStyles}${tableData}`
@@ -643,7 +643,7 @@ app.post('/courseInterest', async (req, res) => {
   `;
 
   const msg = {
-    to: ['rspmanas1@gmail.com'],
+    to: ['cyberbuddy02@gmail.com', 'slnaycollege@gmail.com'],
     from: { name: 'Manas Gupta', email: 'rkinfotechasr@gmail.com' },
     subject: `New member for Course`,
     html: `${tableStyles}${tableData}`
