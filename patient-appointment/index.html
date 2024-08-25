@@ -679,14 +679,21 @@
                     <option value="Agad Tantra">Agad Tantra</option>
                 </select>
 
-                <label for="doctor">Select Doctor:</label>
+                <!-- <label for="doctor">Select Doctor:</label>
                 <select id="doctor" name="doctor" onchange="updateDays()">
                     <option value="">--Select Doctor--</option>
-                </select>
+                </select> -->
 
                 <label for="day">Select Day:</label>
                 <select id="day" name="day">
                     <option value="">--Select Day--</option>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
                 </select>
 
                 <label for="message">Message for the Doctor:</label>
@@ -696,81 +703,81 @@
             </form>
 
             <script>
-                const doctors = {
-                    "Kaya Chikitsa (Medicine)": [
-                        { name: "Dr. Ritesh Chawla", days: ["Monday", "Friday"] },
-                        { name: "Dr. Priyanka Bhatt", days: ["Tuesday", "Thursday"] },
-                        { name: "Dr. Pallavi Sharma", days: ["Wednesday", "Saturday"] }
-                    ],
-                    "Prasuti Tantra": [
-                        { name: "Dr. Jasbir Kaur", days: ["Monday", "Wednesday", "Friday"] },
-                        { name: "Dr. Mandeep Kaur", days: ["Tuesday", "Thursday", "Saturday"] }
-                    ],
-                    "Shalakya (ENT, Eye)": [
-                        { name: "Dr. Tipu", days: ["Monday", "Wednesday", "Friday"] },
-                        { name: "Dr. Amandeep Gupta", days: ["Tuesday", "Thursday", "Saturday"] }
-                    ],
-                    "Panchkarma": [
-                        { name: "Dr. Rajeev Sood", days: ["Tuesday", "Thursday", "Saturday"] },
-                        { name: "Dr. Varun Bhagat", days: ["Monday", "Wednesday", "Friday"] }
-                    ],
-                    "Shalya Tantra": [
-                        { name: "Dr. Paramjit Singh", days: ["Monday", "Wednesday", "Friday"] },
-                        { name: "Dr. Ankit Saini", days: ["Tuesday", "Thursday", "Saturday"] }
-                    ],
-                    "Kaumarbhritya (Bal Rog)": [
-                        { name: "Dr. Sudha Bhalla", days: ["Monday", "Tuesday", "Wednesday", "Friday"] }
-                    ],
-                    "Swasthvritta Avum Yoga": [
-                        { name: "Dr. Renu Devi Arya", days: ["Tuesday", "Thursday", "Saturday"] },
-                        { name: "Dr. Sajjad Elahi Malik", days: ["Monday", "Wednesday", "Friday"] }
-                    ],
-                    "Agad Tantra": [
-                        { name: "Dr. Manpreet Singh", days: ["Monday", "Wednesday", "Friday"] },
-                        { name: "Dr. Reeta Abrol", days: ["Tuesday", "Thursday", "Saturday"] }
-                    ]
-                };
+            //     const doctors = {
+            //         "Kaya Chikitsa (Medicine)": [
+            //             { name: "Dr. Ritesh Chawla", days: ["Monday", "Friday"] },
+            //             { name: "Dr. Priyanka Bhatt", days: ["Tuesday", "Thursday"] },
+            //             { name: "Dr. Pallavi Sharma", days: ["Wednesday", "Saturday"] }
+            //         ],
+            //         "Prasuti Tantra": [
+            //             { name: "Dr. Jasbir Kaur", days: ["Monday", "Wednesday", "Friday"] },
+            //             { name: "Dr. Mandeep Kaur", days: ["Tuesday", "Thursday", "Saturday"] }
+            //         ],
+            //         "Shalakya (ENT, Eye)": [
+            //             { name: "Dr. Tipu", days: ["Monday", "Wednesday", "Friday"] },
+            //             { name: "Dr. Amandeep Gupta", days: ["Tuesday", "Thursday", "Saturday"] }
+            //         ],
+            //         "Panchkarma": [
+            //             { name: "Dr. Rajeev Sood", days: ["Tuesday", "Thursday", "Saturday"] },
+            //             { name: "Dr. Varun Bhagat", days: ["Monday", "Wednesday", "Friday"] }
+            //         ],
+            //         "Shalya Tantra": [
+            //             { name: "Dr. Paramjit Singh", days: ["Monday", "Wednesday", "Friday"] },
+            //             { name: "Dr. Ankit Saini", days: ["Tuesday", "Thursday", "Saturday"] }
+            //         ],
+            //         "Kaumarbhritya (Bal Rog)": [
+            //             { name: "Dr. Sudha Bhalla", days: ["Monday", "Tuesday", "Wednesday", "Friday"] }
+            //         ],
+            //         "Swasthvritta Avum Yoga": [
+            //             { name: "Dr. Renu Devi Arya", days: ["Tuesday", "Thursday", "Saturday"] },
+            //             { name: "Dr. Sajjad Elahi Malik", days: ["Monday", "Wednesday", "Friday"] }
+            //         ],
+            //         "Agad Tantra": [
+            //             { name: "Dr. Manpreet Singh", days: ["Monday", "Wednesday", "Friday"] },
+            //             { name: "Dr. Reeta Abrol", days: ["Tuesday", "Thursday", "Saturday"] }
+            //         ]
+            //     };
 
-                function updateDoctors() {
-                    const department = document.getElementById('department').value;
-                    const doctorSelect = document.getElementById('doctor');
-                    const daySelect = document.getElementById('day');
+            //     function updateDoctors() {
+            //         const department = document.getElementById('department').value;
+            //         const doctorSelect = document.getElementById('doctor');
+            //         const daySelect = document.getElementById('day');
 
-                    // Clear previous options
-                    doctorSelect.innerHTML = '<option value="">--Select Doctor--</option>';
-                    daySelect.innerHTML = '<option value="">--Select Day--</option>';
+            //         // Clear previous options
+            //         doctorSelect.innerHTML = '<option value="">--Select Doctor--</option>';
+            //         daySelect.innerHTML = '<option value="">--Select Day--</option>';
 
-                    if (department && doctors[department]) {
-                        doctors[department].forEach(doctor => {
-                            const option = document.createElement('option');
-                            option.value = doctor.name;
-                            option.text = doctor.name;
-                            doctorSelect.appendChild(option);
-                        });
-                    }
-                }
+            //         if (department && doctors[department]) {
+            //             doctors[department].forEach(doctor => {
+            //                 const option = document.createElement('option');
+            //                 option.value = doctor.name;
+            //                 option.text = doctor.name;
+            //                 doctorSelect.appendChild(option);
+            //             });
+            //         }
+            //     }
 
-                function updateDays() {
-                    const department = document.getElementById('department').value;
-                    const doctorName = document.getElementById('doctor').value;
-                    const daySelect = document.getElementById('day');
+            //     function updateDays() {
+            //         const department = document.getElementById('department').value;
+            //         const doctorName = document.getElementById('doctor').value;
+            //         const daySelect = document.getElementById('day');
 
-                    // Clear previous options
-                    daySelect.innerHTML = '<option value="">--Select Day--</option>';
+            //         // Clear previous options
+            //         daySelect.innerHTML = '<option value="">--Select Day--</option>';
 
-                    if (department && doctorName && doctors[department]) {
-                        const doctor = doctors[department].find(d => d.name === doctorName);
-                        if (doctor) {
-                            doctor.days.forEach(day => {
-                                const option = document.createElement('option');
-                                option.value = day;
-                                option.text = day;
-                                daySelect.appendChild(option);
-                            });
-                        }
-                    }
-                }
-            </script>
+            //         if (department && doctorName && doctors[department]) {
+            //             const doctor = doctors[department].find(d => d.name === doctorName);
+            //             if (doctor) {
+            //                 doctor.days.forEach(day => {
+            //                     const option = document.createElement('option');
+            //                     option.value = day;
+            //                     option.text = day;
+            //                     daySelect.appendChild(option);
+            //                 });
+            //             }
+            //         }
+            //     }
+            // </script>
         </div>
     </section>
 
@@ -1308,11 +1315,11 @@
 
         async function validateAndSendAppointment() {
             const department = document.getElementById('department').value;
-            const doctor = document.getElementById('doctor').value;
             const day = document.getElementById('day').value;
+            const doctor = "N/A";
             const message = document.getElementById('message').value;
 
-            if (!department || !doctor || !day || !message) {
+            if (!department || !day || !message) {
                 toast('Please fill in all the required fields.');
                 return;
             }
