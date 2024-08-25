@@ -409,7 +409,7 @@ app.post('/contactForm', async (req, res) => {
 });
 
 app.post('/bookAppointment', async (req, res) => {
-  let { department, doctor, day, message } = req.body;
+  let { department, patient, number, day, message } = req.body;
 
   // Table styles for the email
   const tableStyles = `
@@ -448,8 +448,12 @@ app.post('/bookAppointment', async (req, res) => {
         <td>${department}</td>
       </tr>
       <tr>
-        <th>Doctor</th>
-        <td>${doctor}</td>
+        <th>patient</th>
+        <td>${patient}</td>
+      </tr>
+      <tr>
+        <th>patient</th>
+        <td>${number}</td>
       </tr>
       <tr>
         <th>Preferred Day</th>

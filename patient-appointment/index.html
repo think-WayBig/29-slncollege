@@ -666,7 +666,13 @@
             <h2>Patient Appointment Booking Form</h2>
 
             <form id="appointmentForm">
-                <label for="department">Select Department:</label>
+                <label for="doctor">Patient Name</label>
+                <input type="text" name="" placeholder="Enter Patient's Full Name" id="patient">
+
+                <label for="doctor">Contact Number</label>
+                <input type="number" name="" placeholder="Enter Your Contact Number" id="number">
+
+                <label for="department">Select Department</label>
                 <select id="department" name="department" onchange="updateDoctors()">
                     <option value="">--Select Department--</option>
                     <option value="Kaya Chikitsa (Medicine)">Kaya Chikitsa (Medicine)</option>
@@ -679,12 +685,7 @@
                     <option value="Agad Tantra">Agad Tantra</option>
                 </select>
 
-                <!-- <label for="doctor">Select Doctor:</label>
-                <select id="doctor" name="doctor" onchange="updateDays()">
-                    <option value="">--Select Doctor--</option>
-                </select> -->
-
-                <label for="day">Select Day:</label>
+                <label for="day">Select Day</label>
                 <select id="day" name="day">
                     <option value="">--Select Day--</option>
                     <option value="Monday">Monday</option>
@@ -696,7 +697,7 @@
                     <option value="Sunday">Sunday</option>
                 </select>
 
-                <label for="message">Message for the Doctor:</label>
+                <label for="message">Message for the Doctor</label>
                 <textarea id="message" name="message" rows="4" placeholder="Enter your message here"></textarea>
 
                 <a onclick="validateAndSendAppointment()">Book Appointment</a>
@@ -1316,10 +1317,11 @@
         async function validateAndSendAppointment() {
             const department = document.getElementById('department').value;
             const day = document.getElementById('day').value;
-            const doctor = "N/A";
+            const patient = document.getElementById('patient').value;
+            const number = document.getElementById('number').value;
             const message = document.getElementById('message').value;
 
-            if (!department || !day || !message) {
+            if (!department || !patient || !number || !day || !message) {
                 toast('Please fill in all the required fields.');
                 return;
             }
@@ -1339,7 +1341,7 @@
             }
 
             try {
-                await postData('https://29-slncollege-api.vercel.app/bookAppointment', { department, doctor, day, message });
+                await postData('https://29-slncollege-api.vercel.app/bookAppointment', { department, patient, number, day, message });
                 toast('Appointment request sent successfully!');
             } catch (error) {
                 console.error('Error:', error);
