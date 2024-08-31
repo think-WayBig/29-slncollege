@@ -676,6 +676,23 @@
   <!--=================================
     Banner -->
 
+  <script>
+    // Wait for the DOM content to fully load
+    document.addEventListener("DOMContentLoaded", function () {
+      // Function to click the 'next' button
+      function clickNextButton() {
+        const nextButton = document.querySelector('.swiper-button-next');
+        if (nextButton) {
+          nextButton.click();
+        }
+      }
+
+      // Set interval to click the 'next' button every 10 seconds
+      setInterval(clickNextButton, 10000); // 10000 milliseconds = 10 seconds
+    });
+  </script>
+
+
   <!--=================================
     Form -->
   <section class="mt-md-n5 mt-4 position-relative z-index-9">
@@ -2234,22 +2251,6 @@
   </script>
   <!--=================================
     Javascript -->
-
-  <script>
-    var swiper = new Swiper('#main-slider', {
-      loop: true,  // Enables continuous loop mode
-      autoplay: {
-        delay: 5000,  // Set the delay between slides in milliseconds (5000ms = 5 seconds)
-        disableOnInteraction: false,  // Keeps autoplay running even after user interactions like swiping
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      effect: 'fade',  // Optional: Adds fade effect for transitions
-      speed: 1000,  // Transition speed between slides in milliseconds
-    });
-  </script>
 
 
   <!-- JS Global Compulsory (Do not remove)-->
