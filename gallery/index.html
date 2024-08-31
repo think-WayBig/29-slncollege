@@ -725,14 +725,13 @@
 
                     <script>
                         document.addEventListener('DOMContentLoaded', function () {
-                            function group1() {
-                                const filtersGroup = document.querySelector('.filters-group1');
+                            function handleScroll(filtersGroup) {
                                 if (!filtersGroup) return; // Exit if the element doesn't exist
 
                                 let isDown = false;
-                                let startX;
-                                let scrollLeft;
+                                let startX, scrollLeft;
 
+                                // Handle mouse events
                                 filtersGroup.addEventListener('mousedown', (e) => {
                                     isDown = true;
                                     filtersGroup.classList.add('active');
@@ -751,51 +750,38 @@
                                 });
 
                                 filtersGroup.addEventListener('mousemove', (e) => {
-                                    if (!isDown) return; // stop the function from running if not dragging
+                                    if (!isDown) return; // Stop if not dragging
                                     e.preventDefault();
                                     const x = e.pageX - filtersGroup.offsetLeft;
-                                    const walk = (x - startX) * 2; // scroll-fast
+                                    const walk = (x - startX) * 2; // Adjust the scroll speed
                                     filtersGroup.scrollLeft = scrollLeft - walk;
                                 });
-                            }
 
-                            function group2() {
-                                const filtersGroup = document.querySelector('.filters-group2');
-                                if (!filtersGroup) return; // Exit if the element doesn't exist
-
-                                let isDown = false;
-                                let startX;
-                                let scrollLeft;
-
-                                filtersGroup.addEventListener('mousedown', (e) => {
+                                // Handle touch events
+                                filtersGroup.addEventListener('touchstart', (e) => {
                                     isDown = true;
                                     filtersGroup.classList.add('active');
-                                    startX = e.pageX - filtersGroup.offsetLeft;
+                                    startX = e.touches[0].pageX - filtersGroup.offsetLeft;
                                     scrollLeft = filtersGroup.scrollLeft;
                                 });
 
-                                filtersGroup.addEventListener('mouseleave', () => {
+                                filtersGroup.addEventListener('touchend', () => {
                                     isDown = false;
                                     filtersGroup.classList.remove('active');
                                 });
 
-                                filtersGroup.addEventListener('mouseup', () => {
-                                    isDown = false;
-                                    filtersGroup.classList.remove('active');
-                                });
-
-                                filtersGroup.addEventListener('mousemove', (e) => {
-                                    if (!isDown) return; // stop the function from running if not dragging
+                                filtersGroup.addEventListener('touchmove', (e) => {
+                                    if (!isDown) return; // Stop if not dragging
                                     e.preventDefault();
-                                    const x = e.pageX - filtersGroup.offsetLeft;
-                                    const walk = (x - startX) * 2; // scroll-fast
+                                    const x = e.touches[0].pageX - filtersGroup.offsetLeft;
+                                    const walk = (x - startX) * 2; // Adjust the scroll speed
                                     filtersGroup.scrollLeft = scrollLeft - walk;
                                 });
                             }
 
-                            // Initialize the functions for both filter groups
-                            group1();
-                            group2();
+                            // Initialize scrolling for both filter groups
+                            handleScroll(document.querySelector('.filters-group1'));
+                            handleScroll(document.querySelector('.filters-group2'));
                         });
                     </script>
 
