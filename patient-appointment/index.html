@@ -480,7 +480,7 @@
                                 <div class="collapse navbar-collapse justify-content-center"
                                     id="navbarSupportedContent">
                                     <ul class="navbar-nav">
-                                        <li class="nav-item dropdown">
+                                        <li class="nav-item active">
                                             <a class="nav-link" href="../" role="button" aria-haspopup="true"
                                                 aria-expanded="false">Home</a>
                                         </li>
@@ -501,8 +501,6 @@
                                                 </li>
                                                 <li><a class="dropdown-item" href="../college-council/">College
                                                         Council</a></li>
-                                                <li><a class="dropdown-item" href="../awards-and-achievements/">Awards
-                                                        and Achievements</a></li>
                                             </ul>
                                         </li>
                                         <li class="nav-item dropdown">
@@ -515,9 +513,11 @@
                                                 <li><a class="dropdown-item" href="../courses/">Courses</a></li>
                                                 <li><a class="dropdown-item" href="../departments/">Departments</a></li>
                                                 <li><a class="dropdown-item" href="../faculty/">Faculty</a></li>
-                                                <li><a class="dropdown-item" href="../results/">Results</a></li>
+                                                <li><a class="dropdown-item" href="../awards-and-achievements/">Awards
+                                                        and Achievements</a></li>
                                                 <li><a class="dropdown-item" href="../publications/">Publications</a>
                                                 </li>
+                                                <li><a class="dropdown-item" href="../attendance/">Attendance</a></li>
                                                 <li><a class="dropdown-item" href="../events/">Events</a></li>
                                             </ul>
                                         </li>
@@ -531,16 +531,17 @@
                                             <ul style="width: auto;" class="dropdown-menu">
                                                 <li><a class="dropdown-item" href="../students-list/">Students List</a>
                                                 </li>
-                                                <li><a class="dropdown-item" href="../attendance/">Attendance</a></li>
+                                                <li><a class="dropdown-item" href="../results/">Results</a></li>
                                                 <li><a class="dropdown-item" href="../hostel/">Hostel</a></li>
-                                                <li><a class="dropdown-item" href="../gallery/">Photo Gallery</a></li>
                                                 <li><a class="dropdown-item"
-                                                        href="../university-rank-holders/">University Rank Holder
-                                                        Update</a>
+                                                        href="../university-rank-holders/">University Rank Holder</a>
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="nav-item dropdown active">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="../gallery/">Photo Gallery</a>
+                                        </li>
+                                        <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" role="button"
                                                 data-toggle="dropdown" aria-haspopup="true"
                                                 aria-expanded="false">Healthcare<i
@@ -562,17 +563,17 @@
                                 </div>
                                 <!-- Navbar END-->
                                 <!-- <div class="search-icon mr-5 mr-lg-0 d-lg-flex d-none align-items-center">
-                      <div class="header-search nav-item">
-                        <div class="search">
-                          <a class="search-btn not_click" href="javascript:void(0);"></a>
-                          <div class="search-box not-click">
-                            <form action="https://themes.potenzaglobalsolutions.com/html/academic/search.html" method="get">
-                              <input type="text" class="not-click form-control" name="search" placeholder="Search..">
-                              <a class="search-button" href="#"> <i class="fa fa-search not-click"></i></a>
-                            </form>
+                        <div class="header-search nav-item">
+                          <div class="search">
+                            <a class="search-btn not_click" href="javascript:void(0);"></a>
+                            <div class="search-box not-click">
+                              <form action="https://themes.potenzaglobalsolutions.com/html/academic/search.html" method="get">
+                                <input type="text" class="not-click form-control" name="search" placeholder="Search..">
+                                <a class="search-button" href="#"> <i class="fa fa-search not-click"></i></a>
+                              </form>
+                            </div>
                           </div>
-                        </div>
-                      </div> -->
+                        </div> -->
                                 <!-- Button END-->
                         </div>
                         </nav>
@@ -587,7 +588,8 @@
 
     <!--=================================
     inner-header -->
-    <section class="inner-banner bg-overlay-black-70 bg-holder" style="background-image: url('../images/bg/hospital.jpg');">
+    <section class="inner-banner bg-overlay-black-70 bg-holder"
+        style="background-image: url('../images/bg/hospital.jpg');">
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="col-md-12">
@@ -704,81 +706,81 @@
             </form>
 
             <script>
-            //     const doctors = {
-            //         "Kaya Chikitsa (Medicine)": [
-            //             { name: "Dr. Ritesh Chawla", days: ["Monday", "Friday"] },
-            //             { name: "Dr. Priyanka Bhatt", days: ["Tuesday", "Thursday"] },
-            //             { name: "Dr. Pallavi Sharma", days: ["Wednesday", "Saturday"] }
-            //         ],
-            //         "Prasuti Tantra": [
-            //             { name: "Dr. Jasbir Kaur", days: ["Monday", "Wednesday", "Friday"] },
-            //             { name: "Dr. Mandeep Kaur", days: ["Tuesday", "Thursday", "Saturday"] }
-            //         ],
-            //         "Shalakya (ENT, Eye)": [
-            //             { name: "Dr. Tipu", days: ["Monday", "Wednesday", "Friday"] },
-            //             { name: "Dr. Amandeep Gupta", days: ["Tuesday", "Thursday", "Saturday"] }
-            //         ],
-            //         "Panchkarma": [
-            //             { name: "Dr. Rajeev Sood", days: ["Tuesday", "Thursday", "Saturday"] },
-            //             { name: "Dr. Varun Bhagat", days: ["Monday", "Wednesday", "Friday"] }
-            //         ],
-            //         "Shalya Tantra": [
-            //             { name: "Dr. Paramjit Singh", days: ["Monday", "Wednesday", "Friday"] },
-            //             { name: "Dr. Ankit Saini", days: ["Tuesday", "Thursday", "Saturday"] }
-            //         ],
-            //         "Kaumarbhritya (Bal Rog)": [
-            //             { name: "Dr. Sudha Bhalla", days: ["Monday", "Tuesday", "Wednesday", "Friday"] }
-            //         ],
-            //         "Swasthvritta Avum Yoga": [
-            //             { name: "Dr. Renu Devi Arya", days: ["Tuesday", "Thursday", "Saturday"] },
-            //             { name: "Dr. Sajjad Elahi Malik", days: ["Monday", "Wednesday", "Friday"] }
-            //         ],
-            //         "Agad Tantra": [
-            //             { name: "Dr. Manpreet Singh", days: ["Monday", "Wednesday", "Friday"] },
-            //             { name: "Dr. Reeta Abrol", days: ["Tuesday", "Thursday", "Saturday"] }
-            //         ]
-            //     };
+                //     const doctors = {
+                //         "Kaya Chikitsa (Medicine)": [
+                //             { name: "Dr. Ritesh Chawla", days: ["Monday", "Friday"] },
+                //             { name: "Dr. Priyanka Bhatt", days: ["Tuesday", "Thursday"] },
+                //             { name: "Dr. Pallavi Sharma", days: ["Wednesday", "Saturday"] }
+                //         ],
+                //         "Prasuti Tantra": [
+                //             { name: "Dr. Jasbir Kaur", days: ["Monday", "Wednesday", "Friday"] },
+                //             { name: "Dr. Mandeep Kaur", days: ["Tuesday", "Thursday", "Saturday"] }
+                //         ],
+                //         "Shalakya (ENT, Eye)": [
+                //             { name: "Dr. Tipu", days: ["Monday", "Wednesday", "Friday"] },
+                //             { name: "Dr. Amandeep Gupta", days: ["Tuesday", "Thursday", "Saturday"] }
+                //         ],
+                //         "Panchkarma": [
+                //             { name: "Dr. Rajeev Sood", days: ["Tuesday", "Thursday", "Saturday"] },
+                //             { name: "Dr. Varun Bhagat", days: ["Monday", "Wednesday", "Friday"] }
+                //         ],
+                //         "Shalya Tantra": [
+                //             { name: "Dr. Paramjit Singh", days: ["Monday", "Wednesday", "Friday"] },
+                //             { name: "Dr. Ankit Saini", days: ["Tuesday", "Thursday", "Saturday"] }
+                //         ],
+                //         "Kaumarbhritya (Bal Rog)": [
+                //             { name: "Dr. Sudha Bhalla", days: ["Monday", "Tuesday", "Wednesday", "Friday"] }
+                //         ],
+                //         "Swasthvritta Avum Yoga": [
+                //             { name: "Dr. Renu Devi Arya", days: ["Tuesday", "Thursday", "Saturday"] },
+                //             { name: "Dr. Sajjad Elahi Malik", days: ["Monday", "Wednesday", "Friday"] }
+                //         ],
+                //         "Agad Tantra": [
+                //             { name: "Dr. Manpreet Singh", days: ["Monday", "Wednesday", "Friday"] },
+                //             { name: "Dr. Reeta Abrol", days: ["Tuesday", "Thursday", "Saturday"] }
+                //         ]
+                //     };
 
-            //     function updateDoctors() {
-            //         const department = document.getElementById('department').value;
-            //         const doctorSelect = document.getElementById('doctor');
-            //         const daySelect = document.getElementById('day');
+                //     function updateDoctors() {
+                //         const department = document.getElementById('department').value;
+                //         const doctorSelect = document.getElementById('doctor');
+                //         const daySelect = document.getElementById('day');
 
-            //         // Clear previous options
-            //         doctorSelect.innerHTML = '<option value="">--Select Doctor--</option>';
-            //         daySelect.innerHTML = '<option value="">--Select Day--</option>';
+                //         // Clear previous options
+                //         doctorSelect.innerHTML = '<option value="">--Select Doctor--</option>';
+                //         daySelect.innerHTML = '<option value="">--Select Day--</option>';
 
-            //         if (department && doctors[department]) {
-            //             doctors[department].forEach(doctor => {
-            //                 const option = document.createElement('option');
-            //                 option.value = doctor.name;
-            //                 option.text = doctor.name;
-            //                 doctorSelect.appendChild(option);
-            //             });
-            //         }
-            //     }
+                //         if (department && doctors[department]) {
+                //             doctors[department].forEach(doctor => {
+                //                 const option = document.createElement('option');
+                //                 option.value = doctor.name;
+                //                 option.text = doctor.name;
+                //                 doctorSelect.appendChild(option);
+                //             });
+                //         }
+                //     }
 
-            //     function updateDays() {
-            //         const department = document.getElementById('department').value;
-            //         const doctorName = document.getElementById('doctor').value;
-            //         const daySelect = document.getElementById('day');
+                //     function updateDays() {
+                //         const department = document.getElementById('department').value;
+                //         const doctorName = document.getElementById('doctor').value;
+                //         const daySelect = document.getElementById('day');
 
-            //         // Clear previous options
-            //         daySelect.innerHTML = '<option value="">--Select Day--</option>';
+                //         // Clear previous options
+                //         daySelect.innerHTML = '<option value="">--Select Day--</option>';
 
-            //         if (department && doctorName && doctors[department]) {
-            //             const doctor = doctors[department].find(d => d.name === doctorName);
-            //             if (doctor) {
-            //                 doctor.days.forEach(day => {
-            //                     const option = document.createElement('option');
-            //                     option.value = day;
-            //                     option.text = day;
-            //                     daySelect.appendChild(option);
-            //                 });
-            //             }
-            //         }
-            //     }
-            // </script>
+                //         if (department && doctorName && doctors[department]) {
+                //             const doctor = doctors[department].find(d => d.name === doctorName);
+                //             if (doctor) {
+                //                 doctor.days.forEach(day => {
+                //                     const option = document.createElement('option');
+                //                     option.value = day;
+                //                     option.text = day;
+                //                     daySelect.appendChild(option);
+                //                 });
+                //             }
+                //         }
+                //     }
+                // </script>
         </div>
     </section>
 
