@@ -766,8 +766,8 @@
               <i class="flaticon-school"></i>
             </div>
             <div class="counter-content">
-              <span class="timer" data-to="1972" data-speed="10000">1972</span>
-              <label>Year Established</label>
+              <span class="timer" data-to="1972" data-speed="1000">1972</span>
+              <label style="font-size: 14px;">Years of Establishment</label>
             </div>
           </div>
         </div>
@@ -777,9 +777,9 @@
               <i class="flaticon-trophy"></i>
             </div>
             <div class="counter-content align-self-center">
-              <span class="timer" data-to="30" data-speed="10000">30</span><span
+              <span class="timer" data-to="30" data-speed="1000">30</span><span
                 style="font-size: 30px;color: #a61d37;">+</span>
-              <label>Faculty</label>
+              <label style="font-size: 14px;">Faculty</label>
             </div>
           </div>
         </div>
@@ -789,9 +789,9 @@
               <i class="flaticon-student"></i>
             </div>
             <div class="counter-content">
-              <span class="timer" data-to="350" data-speed="10000">350</span><span
+              <span class="timer" data-to="350" data-speed="1000">350</span><span
                 style="font-size: 30px;color: #a61d37;">+</span>
-              <label>Active students</label>
+              <label style="font-size: 14px;">Active students</label>
             </div>
           </div>
         </div>
@@ -801,9 +801,9 @@
               <i class="flaticon-diploma-1"></i>
             </div>
             <div class="counter-content">
-              <span class="timer" data-to="200" data-speed="10000">200</span><span
+              <span class="timer" data-to="200" data-speed="1000">200</span><span
                 style="font-size: 30px;color: #a61d37;">+</span>
-              <label>PG Alumni</label>
+              <label style="font-size: 14px;">PG Alumni</label>
             </div>
           </div>
         </div>
@@ -2234,6 +2234,23 @@
   </script>
   <!--=================================
     Javascript -->
+
+  <script>
+    var swiper = new Swiper('#main-slider', {
+      loop: true,  // Enables continuous loop mode
+      autoplay: {
+        delay: 5000,  // Set the delay between slides in milliseconds (5000ms = 5 seconds)
+        disableOnInteraction: false,  // Keeps autoplay running even after user interactions like swiping
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      effect: 'fade',  // Optional: Adds fade effect for transitions
+      speed: 1000,  // Transition speed between slides in milliseconds
+    });
+  </script>
+
 
   <!-- JS Global Compulsory (Do not remove)-->
   <script src="js/jquery-3.5.1.min.js"></script>
