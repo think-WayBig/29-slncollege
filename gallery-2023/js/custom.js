@@ -36,9 +36,9 @@ NOTE: This file contains all scripts for the actual Template.
   "use strict";
   var POTENZA = {};
 
-/*************************
-  Predefined Variables
-*************************/
+  /*************************
+    Predefined Variables
+  *************************/
   var $window = $(window),
     $document = $(document),
     $body = $('body'),
@@ -50,17 +50,17 @@ NOTE: This file contains all scripts for the actual Template.
     return this.length > 0;
   };
 
-/*************************
-        Preloader
-  *************************/
+  /*************************
+          Preloader
+    *************************/
   POTENZA.preloader = function () {
     $("#load").fadeOut();
     $('#pre-loader').delay(0).fadeOut('slow');
   };
 
-/*************************
-      Menu
-  *************************/
+  /*************************
+        Menu
+    *************************/
   POTENZA.dropdownmenu = function () {
     if ($('.navbar').exists()) {
       $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
@@ -77,15 +77,15 @@ NOTE: This file contains all scripts for the actual Template.
     }
   };
 
-/*************************
-      Tooltip
-*************************/
-$('[data-toggle="tooltip"]').tooltip();
-$('[data-toggle="popover"]').popover()
+  /*************************
+        Tooltip
+  *************************/
+  $('[data-toggle="tooltip"]').tooltip();
+  $('[data-toggle="popover"]').popover()
 
-/*************************
-       counter
-*************************/
+  /*************************
+         counter
+  *************************/
   POTENZA.counters = function () {
     var counter = jQuery(".counter");
     if (counter.length > 0) {
@@ -155,36 +155,36 @@ $('[data-toggle="popover"]').popover()
         Swiper slider
 *************************/
   POTENZA.swiperAnimation = function () {
-  var siperslider = jQuery(".swiper-container");
-  if (siperslider.length > 0) {
-    var swiperAnimation = new SwiperAnimation();
-        var swiper = new Swiper(".swiper-container", {
-          init : true,
-          direction: "horizontal",
-          effect: "slide",
-          loop: true,
-          keyboard: {
-            enabled: true,
-            onlyInViewport: true
+    var siperslider = jQuery(".swiper-container");
+    if (siperslider.length > 0) {
+      var swiperAnimation = new SwiperAnimation();
+      var swiper = new Swiper(".swiper-container", {
+        init: true,
+        direction: "horizontal",
+        effect: "slide",
+        loop: true,
+        keyboard: {
+          enabled: true,
+          onlyInViewport: true
+        },
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        on: {
+          init: function () {
+            swiperAnimation.init(this).animate();
           },
-            // Navigation arrows
-            navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-              el: '.swiper-pagination',
-              clickable: true,
-            },
-          on: {
-            init: function() {
-              swiperAnimation.init(this).animate();
-            },
-            slideChange: function() {
-              swiperAnimation.init(this).animate();
-            }
+          slideChange: function () {
+            swiperAnimation.init(this).animate();
           }
-        });
+        }
+      });
     }
   }
 
@@ -250,9 +250,9 @@ $('[data-toggle="popover"]').popover()
   /*************************
       Shuffle
   *************************/
-   POTENZA.shuffle = function () {
-   if ($('.my-shuffle-container').exists()) {
-    var Shuffle = window.Shuffle;
+  POTENZA.shuffle = function () {
+    if ($('.my-shuffle-container').exists()) {
+      var Shuffle = window.Shuffle;
       var element = document.querySelector('.my-shuffle-container');
       var sizer = element.querySelector('.my-sizer-element');
       var shuffleInstance = new Shuffle(element, {
@@ -261,39 +261,65 @@ $('[data-toggle="popover"]').popover()
         speed: 700,
         columnThreshold: 0
       });
-      jQuery(document).ready(function(){
-        jQuery(".btn-filter").on( 'click', function(){
+      jQuery(document).ready(function () {
+        jQuery(".btn-filter").on('click', function () {
           var data_group = jQuery(this).attr('data-group');
-          if( data_group != 'all' ){
+          if (data_group != 'all') {
             shuffleInstance.filter([data_group]);
           } else {
             shuffleInstance.filter();
           }
         });
-        $(".filters-group .btn-filter").on( 'click', function(){
-            $(".filters-group .btn-filter").removeClass("active");
-            $(this).addClass("active");
+        $(".filters-group .btn-filter").on('click', function () {
+          $(".filters-group .btn-filter").removeClass("active");
+          $(this).addClass("active");
         });
-    });
-  }
- }
+      });
+    }
 
-/*************************
-      select2
-*************************/
+    if ($('.my-shuffle-container2').exists()) {
+      var Shuffle = window.Shuffle;
+      var element = document.querySelector('.my-shuffle-container2');
+      var sizer = element.querySelector('.my-sizer-element');
+      var shuffleInstance = new Shuffle(element, {
+        itemSelector: '.grid-item2',
+        sizer: sizer, // could also be a selector: '.my-sizer-element'
+        speed: 700,
+        columnThreshold: 0
+      });
+      jQuery(document).ready(function () {
+        jQuery(".btn-filter2").on('click', function () {
+          var data_group = jQuery(this).attr('data-group2');
+          if (data_group != 'all') {
+            shuffleInstance.filter([data_group]);
+          } else {
+            shuffleInstance.filter();
+          }
+        });
+        $(".filters-group .btn-filter2").on('click', function () {
+          $(".filters-group .btn-filter2").removeClass("active");
+          $(this).addClass("active");
+        });
+      });
+    }
+  }
+
+  /*************************
+        select2
+  *************************/
   POTENZA.select2 = function () {
     if ($('.basic-select').exists()) {
       var select = jQuery(".basic-select");
       if (select.length > 0) {
-        $('.basic-select').select2({dropdownCssClass : 'bigdrop'});
+        $('.basic-select').select2({ dropdownCssClass: 'bigdrop' });
       }
 
     }
   };
 
-/*************************
-    Countdown
-*************************/
+  /*************************
+      Countdown
+  *************************/
   POTENZA.countdownTimer = function () {
     if ($countdownTimer.exists()) {
       $countdownTimer.downCount({
@@ -306,39 +332,39 @@ $('[data-toggle="popover"]').popover()
   /*************************
       Search
 *************************/
-POTENZA.searchbox = function () {
-   if (jQuery('.search').exists()) {
+  POTENZA.searchbox = function () {
+    if (jQuery('.search').exists()) {
       jQuery('.search-btn').on("click", function () {
-         jQuery('.search').toggleClass("search-open");
-           return false;
-          });
-       jQuery("html, body").on('click', function (e) {
+        jQuery('.search').toggleClass("search-open");
+        return false;
+      });
+      jQuery("html, body").on('click', function (e) {
         if (!jQuery(e.target).hasClass("not-click")) {
 
-             jQuery('.search').removeClass("search-open");
-         }
-     });
-    }
-}
-
-/*************************
-      sticky
-*************************/
-POTENZA.isSticky = function () {
-
-  $(window).on('scroll',function(event) {
-        var scroll = $(window).scrollTop();
-        if (scroll < 300) {
-            $(".header-sticky").removeClass("sticky-top");
-        }else{
-            $(".header-sticky").addClass("sticky-top");
+          jQuery('.search').removeClass("search-open");
         }
-    });
-};
+      });
+    }
+  }
 
-/*************************
-     Back to top
-*************************/
+  /*************************
+        sticky
+  *************************/
+  POTENZA.isSticky = function () {
+
+    $(window).on('scroll', function (event) {
+      var scroll = $(window).scrollTop();
+      if (scroll < 300) {
+        $(".header-sticky").removeClass("sticky-top");
+      } else {
+        $(".header-sticky").addClass("sticky-top");
+      }
+    });
+  };
+
+  /*************************
+       Back to top
+  *************************/
   POTENZA.goToTop = function () {
     var $goToTop = $('#back-to-top');
     $goToTop.hide();
@@ -354,37 +380,37 @@ POTENZA.isSticky = function () {
     });
   }
 
-    /*************************
-          Progressbar
-    *************************/
-    POTENZA.progressBar = function () {
-      if ($progressBar.exists()) {
-          $progressBar.each(function (i, elem) {
-              var $elem = $(this),
-                  percent = $elem.attr('data-percent') || "100",
-                  delay = $elem.attr('data-delay') || "100",
-                  type = $elem.attr('data-type') || "%";
+  /*************************
+        Progressbar
+  *************************/
+  POTENZA.progressBar = function () {
+    if ($progressBar.exists()) {
+      $progressBar.each(function (i, elem) {
+        var $elem = $(this),
+          percent = $elem.attr('data-percent') || "100",
+          delay = $elem.attr('data-delay') || "100",
+          type = $elem.attr('data-type') || "%";
 
-              if (!$elem.hasClass('progress-animated')) {
-                  $elem.css({
-                      'width': '0%'
-                  });
-              }
-              var progressBarRun = function () {
-                  $elem.animate({
-                      'width': percent + '%'
-                  }, 'easeInOutCirc').addClass('progress-animated');
-
-                  $elem.delay(delay).append('<span class="progress-type animated fadeIn">' + type + '</span><span class="progress-number animated fadeIn">' + percent + '</span>');
-              };
-              $(elem).appear(function () {
-                  setTimeout(function () {
-                      progressBarRun();
-                  }, delay);
-              });
+        if (!$elem.hasClass('progress-animated')) {
+          $elem.css({
+            'width': '0%'
           });
         }
-    };
+        var progressBarRun = function () {
+          $elem.animate({
+            'width': percent + '%'
+          }, 'easeInOutCirc').addClass('progress-animated');
+
+          $elem.delay(delay).append('<span class="progress-type animated fadeIn">' + type + '</span><span class="progress-number animated fadeIn">' + percent + '</span>');
+        };
+        $(elem).appear(function () {
+          setTimeout(function () {
+            progressBarRun();
+          }, delay);
+        });
+      });
+    }
+  };
 
   /****************************************************
        POTENZA Window load and functions
@@ -392,21 +418,21 @@ POTENZA.isSticky = function () {
   //Window load functions
   $window.on("load", function () {
     POTENZA.preloader(),
-    POTENZA.shuffle(),
-    POTENZA.progressBar();
+      POTENZA.shuffle(),
+      POTENZA.progressBar();
   });
 
   //Document ready functions
   $document.ready(function () {
     POTENZA.counters(),
-    POTENZA.dropdownmenu(),
-    POTENZA.goToTop(),
-    POTENZA.swiperAnimation(),
-    POTENZA.countdownTimer(),
-    POTENZA.select2(),
-    POTENZA.mediaPopups(),
-    POTENZA.searchbox(),
-    POTENZA.isSticky(),
-    POTENZA.carousel();
+      POTENZA.dropdownmenu(),
+      POTENZA.goToTop(),
+      POTENZA.swiperAnimation(),
+      POTENZA.countdownTimer(),
+      POTENZA.select2(),
+      POTENZA.mediaPopups(),
+      POTENZA.searchbox(),
+      POTENZA.isSticky(),
+      POTENZA.carousel();
   });
 })(jQuery);
